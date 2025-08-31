@@ -16,23 +16,23 @@ const About: React.FC = () => {
             <h2 className="about-title">About Me</h2>
             <div className="about-summary">
               <p>
-                Hi, I’m Mohammed Sedeg (my friends call me Silva), an AI Engineer & Researcher currently based in Turkey (and open to relocating). 
-                I love turning cutting-edge AI research into real-world solutions that make an impact. 
-                From building smart LLMs and computer vision systems to optimizing models for edge devices, 
-                I enjoy the challenge of bridging theory and practice.
+                Hi, I’m Mohammed Sedeg (Silva), an AI Engineer & Researcher based in Turkey (open to relocating). 
+                I specialize in translating advanced AI research into real-world solutions that create impact. 
+                From building smart LLMs and computer vision systems to deploying models on edge devices, 
+                I love bridging theory and practice.
               </p>
               
               <p>
-                I’m endlessly curious about how AI works under the hood, and I find joy in exploring 
-                neural architectures, distributed training, and generative AI techniques. Teaching and mentoring 
-                fellow engineers is another passion of mine—I believe that sharing knowledge amplifies innovation.
+                My background in Mechatronics and Robotics has shaped how I approach AI: I design and optimize 
+                deep learning models specifically for autonomous systems, robotics perception, and control. 
+                Leveraging Edge AI, I ensure that these models run efficiently on low-power devices while maintaining 
+                high performance—bringing intelligence directly to the robot's hardware.
               </p>
-              
+
               <p>
-                In my projects, I focus on making AI efficient, reliable, and scalable: whether it’s 
-                fine-tuning GPT and LLaMA models, creating fast RAG pipelines, or deploying low-latency 
-                models for edge devices. At heart, I’m a problem solver who loves combining research, 
-                engineering, and creativity to deliver tangible results.
+                I’m endlessly curious about neural architectures, distributed training, and generative AI. 
+                Mentoring and sharing knowledge is also a passion, as I believe it amplifies innovation. 
+                Ultimately, I combine research, engineering, and creativity to deliver practical, high-impact solutions.
               </p>
             </div>
           </div>

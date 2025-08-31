@@ -7,6 +7,9 @@ export const LazyProjects = lazy(() => import('./sections/Projects'));
 export const LazySkills = lazy(() => import('./sections/Skills'));
 export const LazyContact = lazy(() => import('./sections/Contact'));
 
+// NEW: Lazy load Education
+export const LazyEducation = lazy(() => import('./sections/Education'));
+
 // Lazy load UI components that might not be immediately needed
 export const LazyModal = lazy(() => import('./ui/Modal'));
 export const LazyProjectDetail = lazy(() => import('./ui/ProjectDetail'));
