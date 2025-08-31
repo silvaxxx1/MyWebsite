@@ -1,0 +1,19 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#f7fafc"/>
+  <rect x="1" y="1" width="1198" height="798" stroke="#e2e8f0" stroke-width="2"/>
+  
+  <!-- Project placeholder icon -->
+  <g transform="translate(500, 300)">
+    <rect x="0" y="0" width="200" height="150" rx="8" fill="#e2e8f0" stroke="#cbd5e0" stroke-width="2"/>
+    <circle cx="60" cy="50" r="20" fill="#a0aec0"/>
+    <path d="M20 120 L60 80 L100 100 L140 60 L180 80 L180 120 Z" fill="#cbd5e0"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="600" y="500" text-anchor="middle" fill="#718096" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="500">
+    Project Image Placeholder
+  </text>
+  <text x="600" y="530" text-anchor="middle" fill="#a0aec0" font-family="system-ui, -apple-system, sans-serif" font-size="16">
+    Add your project images to public/images/projects/
+  </text>
+</svg>
