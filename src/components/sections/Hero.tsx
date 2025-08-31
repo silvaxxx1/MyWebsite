@@ -6,13 +6,8 @@ import './Hero.css';
 const Hero: React.FC = () => {
   const { scrollToSection } = useNavigation();
 
-  const handleViewWork = () => {
-    scrollToSection('projects');
-  };
-
-  const handleContact = () => {
-    scrollToSection('contact');
-  };
+  const handleViewWork = () => scrollToSection('projects');
+  const handleContact = () => scrollToSection('contact');
 
   return (
     <div className="hero">
@@ -20,7 +15,7 @@ const Hero: React.FC = () => {
         <div className="hero__gradient"></div>
         <div className="hero__pattern"></div>
       </div>
-      
+
       <div className="hero__container">
         <div className="hero__content">
           <div className="hero__text">
@@ -31,15 +26,15 @@ const Hero: React.FC = () => {
                 AI Engineer & Researcher
               </span>
             </h1>
-            
+
             <p className="hero__description animate-fade-in-up animate-delay-700">
               AI Engineer & Researcher bridging research and deployment to build impactful AI systems in LLMs, computer vision, and edge AI.
             </p>
-            
+
             <div className="hero__stats animate-fade-in-up animate-delay-1000">
               <div className="hero__stat hover-lift">
                 <span className="hero__stat-number">5+</span>
-                <span className="hero__stat-label">IA projects</span>
+                <span className="hero__stat-label">AI projects</span>
               </div>
               <div className="hero__stat hover-lift">
                 <span className="hero__stat-number">+3</span>
@@ -47,7 +42,7 @@ const Hero: React.FC = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="hero__actions animate-fade-in-up animate-delay-1000">
             <Button 
               variant="primary" 
@@ -63,9 +58,17 @@ const Hero: React.FC = () => {
             >
               Get In Touch
             </Button>
+            {/* Resume Download Button */}
+            <a 
+              href="/Mohammed_Sedeg_Resume.pdf" 
+              download 
+              className="hero__cta-resume hover-lift"
+            >
+              Download Resume
+            </a>
           </div>
         </div>
-        
+
         <div className="hero__visual animate-fade-in-right animate-delay-500">
           <div className="hero__avatar animate-scale-in-bounce animate-delay-700">
             <img 
@@ -75,7 +78,7 @@ const Hero: React.FC = () => {
               loading="eager"
             />
           </div>
-          
+
           <div className="hero__floating-elements">
             <div className="hero__floating-element hero__floating-element--1 animate-float animate-delay-1000">
               <span>Data</span>
@@ -89,7 +92,7 @@ const Hero: React.FC = () => {
           </div>
         </div>
       </div>
-      
+
       <div className="hero__scroll-indicator">
         <div className="hero__scroll-arrow">
           <svg viewBox="0 0 24 24" fill="currentColor">

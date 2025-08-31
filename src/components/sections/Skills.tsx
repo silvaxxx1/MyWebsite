@@ -5,7 +5,7 @@ import './Skills.css';
 
 interface Skill {
   name: string;
-  category: 'ai-ml' | 'librariesAndFrameworks' | 'computerVision' | 'mlops' | 'programming';
+  category: 'ai-ml' | 'librariesAndFrameworks' | 'computerVision' | 'mlops' | 'databases' | 'programming';
 }
 
 const Skills: React.FC = () => {
@@ -44,27 +44,30 @@ const Skills: React.FC = () => {
     { name: 'Albumentations', category: 'computerVision' },
     { name: 'Roboflow', category: 'computerVision' },
 
-    // MLOps & Deployment / Data & Storage
+    // MLOps & Deployment
     { name: 'Docker', category: 'mlops' },
     { name: 'FastAPI', category: 'mlops' },
     { name: 'CI/CD', category: 'mlops' },
     { name: 'GitHub Actions', category: 'mlops' },
     { name: 'AWS SageMaker', category: 'mlops' },
-    { name: 'SQL & Pandas', category: 'mlops' },
-    { name: 'PySpark & NumPy', category: 'mlops' },
     { name: 'MLflow', category: 'mlops' },
-    { name: 'MongoDB', category: 'mlops' },
-    { name: 'Qdrant', category: 'mlops' },
-    { name: 'PostgreSQL', category: 'mlops' },
-    { name: 'SQLAlchemy', category: 'mlops' },
-    { name: 'Alembic', category: 'mlops' },
+
+    // Databases & Data Handling
+    { name: 'SQL & Pandas', category: 'databases' },
+    { name: 'PySpark & NumPy', category: 'databases' },
+    { name: 'MongoDB', category: 'databases' },
+    { name: 'Qdrant', category: 'databases' },
+    { name: 'PostgreSQL', category: 'databases' },
+    { name: 'SQLAlchemy', category: 'databases' },
+    { name: 'Alembic', category: 'databases' },
   ];
 
   const skillCategories = {
     'ai-ml': 'AI & Machine Learning',
     'librariesAndFrameworks': 'Libraries & Frameworks',
     'computerVision': 'Computer Vision',
-    'mlops': 'MLOps, Databases & Deployment',
+    'mlops': 'MLOps & Deployment',
+    'databases': 'Databases & Data Handling',
     'programming': 'Programming Languages',
   };
 

@@ -7,7 +7,7 @@ export const experiences: Experience[] = [
     position: 'AI Engineer, Computer Vision Specialist',
     location: 'Turkey',
     startDate: '2024',
-    endDate: '2024',
+    endDate: '2025',
     description: 'Built and deployed production-grade AI systems for computer vision applications on edge devices. Focused on model optimization, low-latency inference, and automated labeling pipelines.',
     achievements: [
       'Built low-latency TFLite/ONNX models for Jetson & Raspberry Pi (60–80 ms inference)',
