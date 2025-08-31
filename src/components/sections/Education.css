@@ -96,3 +96,24 @@
   opacity: 1;
   margin-top: 16px;
 }
+
+.education-skills {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.education-skill-badge {
+  background-color: #eef2f7;
+  color: #1e40af;
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.education-skill-badge:hover {
+  background-color: #d0e6ff;
+}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { educations } from '../../data/education';// create this data file
+import { educations } from '../../data/education';
 import { Card } from '../ui';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 import './Education.css';
@@ -22,16 +22,16 @@ const Education: React.FC = () => {
       <div className="education-container">
         <div className="section-header">
           <h2 className="section-title">Education</h2>
-          <p className="section-subtitle">Formal education and specializations in AI and engineering</p>
+          <p className="section-subtitle">Formal education and specializations in AI, robotics, and Edge AI</p>
         </div>
 
-        <div 
-          ref={educationRef} 
+        <div
+          ref={educationRef}
           className={`education-timeline ${educationVisible ? 'scroll-animate animate-in' : 'scroll-animate'}`}
         >
           {educations.map((edu, index) => (
-            <div 
-              key={edu.id} 
+            <div
+              key={edu.id}
               className={`education-card ${educationVisible ? 'animate-fade-in-up' : ''}`}
               style={{ animationDelay: `${index * 0.2}s` }}
             >
@@ -40,6 +40,7 @@ const Education: React.FC = () => {
                   className={`timeline-toggle ${isExpanded(edu.id) ? 'expanded' : ''}`}
                   onClick={() => toggleExpanded(edu.id)}
                   aria-label={`${isExpanded(edu.id) ? 'Collapse' : 'Expand'} education details`}
+                  aria-expanded={isExpanded(edu.id)}
                 >
                   <svg className="triangle-icon" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
@@ -49,17 +50,18 @@ const Education: React.FC = () => {
               </div>
 
               <Card variant="elevated" hover className="education-content hover-lift">
-                <div 
+                <div
                   className="education-header"
-                  onClick={() => toggleExpanded(edu.id)}
                   role="button"
                   tabIndex={0}
+                  onClick={() => toggleExpanded(edu.id)}
                   onKeyDown={(e) => {
                     if (e.key === 'Enter' || e.key === ' ') {
                       e.preventDefault();
                       toggleExpanded(edu.id);
                     }
                   }}
+                  aria-expanded={isExpanded(edu.id)}
                 >
                   <div className="education-title-group">
                     <h3 className="education-degree">{edu.degree}</h3>
@@ -72,7 +74,14 @@ const Education: React.FC = () => {
                 </div>
 
                 <div className={`education-details ${isExpanded(edu.id) ? 'expanded' : 'collapsed'}`}>
-                  {edu.description && <p>{edu.description}</p>}
+                  <p>{edu.description}</p>
+                  {edu.skills && (
+                    <div className="education-skills">
+                      {edu.skills.map(skill => (
+                        <span key={skill} className="education-skill-badge">{skill}</span>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </Card>
             </div>
