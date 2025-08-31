@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, Suspense } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import { Header, Footer } from './components/layout';
 import { Hero } from './components/sections';
 import { LazyAbout, LazyExperience, LazyProjects, LazySkills, LazyContact } from './components/LazyComponents';
@@ -86,23 +87,19 @@ const App: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
+  const toggleDarkMode = () => setIsDarkMode(!isDarkMode);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const headerHeight = 80; // Account for fixed header
+      const headerHeight = 80;
       const targetPosition = element.offsetTop - headerHeight;
 
-      // Add smooth scrolling with easing
       window.scrollTo({
         top: targetPosition,
         behavior: 'smooth'
       });
 
-      // Add a subtle animation to the target section
       element.style.transform = 'scale(1.01)';
       element.style.transition = 'transform 0.3s ease';
       setTimeout(() => {
@@ -126,45 +123,47 @@ const App: React.FC = () => {
   };
 
   return (
-    <ThemeContext.Provider value={themeValue}>
-      <NavigationContext.Provider value={navigationValue}>
-        <div className={`app ${isDarkMode ? 'dark' : 'light'}`}>
-          <Header />
-          <main>
-            <section id="hero">
-              <Hero />
-            </section>
-            <section id="experience">
-              <Suspense fallback={<Loading size="large" text="Loading Experience..." />}>
-                <LazyExperience />
-              </Suspense>
-            </section>
-            <section id="projects">
-              <Suspense fallback={<Loading size="large" text="Loading Projects..." />}>
-                <LazyProjects />
-              </Suspense>
-            </section>
-            <section id="about">
-              <Suspense fallback={<Loading size="large" text="Loading About..." />}>
-                <LazyAbout />
-              </Suspense>
-            </section>
-            <section id="skills">
-              <Suspense fallback={<Loading size="large" text="Loading Skills..." />}>
-                <LazySkills />
-              </Suspense>
-            </section>
-            <section id="contact">
-              <Suspense fallback={<Loading size="large" text="Loading Contact..." />}>
-                <LazyContact />
-              </Suspense>
-            </section>
-          </main>
-          <Footer />
-          <PerformanceMonitor />
-        </div>
-      </NavigationContext.Provider>
-    </ThemeContext.Provider>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <ThemeContext.Provider value={themeValue}>
+        <NavigationContext.Provider value={navigationValue}>
+          <div className={`app ${isDarkMode ? 'dark' : 'light'}`}>
+            <Header />
+            <main>
+              <section id="hero">
+                <Hero />
+              </section>
+              <section id="experience">
+                <Suspense fallback={<Loading size="large" text="Loading Experience..." />}>
+                  <LazyExperience />
+                </Suspense>
+              </section>
+              <section id="projects">
+                <Suspense fallback={<Loading size="large" text="Loading Projects..." />}>
+                  <LazyProjects />
+                </Suspense>
+              </section>
+              <section id="about">
+                <Suspense fallback={<Loading size="large" text="Loading About..." />}>
+                  <LazyAbout />
+                </Suspense>
+              </section>
+              <section id="skills">
+                <Suspense fallback={<Loading size="large" text="Loading Skills..." />}>
+                  <LazySkills />
+                </Suspense>
+              </section>
+              <section id="contact">
+                <Suspense fallback={<Loading size="large" text="Loading Contact..." />}>
+                  <LazyContact />
+                </Suspense>
+              </section>
+            </main>
+            <Footer />
+            <PerformanceMonitor />
+          </div>
+        </NavigationContext.Provider>
+      </ThemeContext.Provider>
+    </BrowserRouter>
   );
 };
 

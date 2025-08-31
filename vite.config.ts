@@ -5,7 +5,8 @@ import { resolve } from 'path'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: process.env.NODE_ENV === 'production' ? '/modern-react-portfolio/' : '/',
+  // Important: base must match your GitHub repo name
+  base: process.env.NODE_ENV === 'production' ? '/MyWebsite/' : '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
