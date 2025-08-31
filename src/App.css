@@ -1,0 +1,88 @@
+/* App Component Styles */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-gray-50);
+  color: var(--color-gray-800);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app.dark {
+  background-color: var(--color-gray-900);
+  color: var(--color-gray-100);
+}
+
+/* Main content area */
+.app main {
+  flex: 1;
+  padding-top: 80px; /* Account for fixed header */
+}
+
+/* Section spacing */
+.app section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-20) 0;
+}
+
+.app section:first-child {
+  padding-top: 0; /* Hero section doesn't need extra top padding */
+}
+
+/* Dark mode color overrides */
+.app.dark {
+  --color-gray-50: #111827;
+  --color-gray-100: #1f2937;
+  --color-gray-200: #374151;
+  --color-gray-300: #4b5563;
+  --color-gray-400: #6b7280;
+  --color-gray-500: #9ca3af;
+  --color-gray-600: #d1d5db;
+  --color-gray-700: #e5e7eb;
+  --color-gray-800: #f3f4f6;
+  --color-gray-900: #f9fafb;
+}
+
+/* Smooth scrolling for the entire app */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for better accessibility */
+*:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.app.dark *:focus {
+  outline-color: var(--color-secondary);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  .app,
+  .app * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .app {
+    --color-primary: #0066cc;
+    --color-secondary: #009999;
+  }
+  
+  .app.dark {
+    --color-primary: #66b3ff;
+    --color-secondary: #66cccc;
+  }
+}

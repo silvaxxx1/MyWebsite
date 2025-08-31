@@ -1,0 +1,133 @@
+.card {
+  background: white;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+.card:focus:not(:focus-visible) {
+  box-shadow: none;
+}
+
+.card:focus-visible {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+/* Card Variants */
+.card--default {
+  background: white;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.card--elevated {
+  background: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.card--outlined {
+  background: white;
+  border: 1px solid #e5e7eb;
+  box-shadow: none;
+}
+
+.card--ghost {
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Card Padding */
+.card--padding-none {
+  padding: 0;
+}
+
+.card--padding-small {
+  padding: 16px;
+}
+
+.card--padding-medium {
+  padding: 24px;
+}
+
+.card--padding-large {
+  padding: 32px;
+}
+
+/* Card States */
+.card--hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.card--clickable {
+  cursor: pointer;
+  border: none;
+  text-align: left;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+.card--clickable:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.card--clickable:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Dark Mode Support */
+.app.dark .card--default,
+.app.dark .card--elevated {
+  background: #1e293b;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.app.dark .card--outlined {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+.app.dark .card--hover:hover,
+.app.dark .card--clickable:hover {
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+}
+
+.app.dark .card--clickable:active {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+  
+  .card--hover:hover,
+  .card--clickable:hover,
+  .card--clickable:active {
+    transform: none;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card--padding-large {
+    padding: 24px;
+  }
+  
+  .card--padding-medium {
+    padding: 20px;
+  }
+  
+  .card--padding-small {
+    padding: 12px;
+  }
+}

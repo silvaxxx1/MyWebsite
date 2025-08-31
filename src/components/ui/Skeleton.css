@@ -1,0 +1,158 @@
+.skeleton {
+  background: #e5e7eb;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Skeleton Variants */
+.skeleton--text {
+  height: 1em;
+  margin-bottom: 0.5em;
+  border-radius: 4px;
+}
+
+.skeleton--rectangular {
+  border-radius: 8px;
+}
+
+.skeleton--circular {
+  border-radius: 50%;
+}
+
+/* Skeleton Animations */
+.skeleton--pulse {
+  animation: skeleton-pulse 1.5s ease-in-out infinite;
+}
+
+.skeleton--wave::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: skeleton-wave 1.5s ease-in-out infinite;
+}
+
+.skeleton--none {
+  /* No animation */
+}
+
+/* Skeleton Text Component */
+.skeleton-text {
+  width: 100%;
+}
+
+.skeleton-text__line {
+  margin-bottom: 8px;
+}
+
+.skeleton-text__line:last-child {
+  margin-bottom: 0;
+}
+
+/* Skeleton Card Component */
+.skeleton-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.skeleton-card__image {
+  width: 100%;
+  border-radius: 0;
+}
+
+.skeleton-card__content {
+  padding: 24px;
+}
+
+.skeleton-card__title {
+  margin-bottom: 16px;
+}
+
+.skeleton-card__description {
+  margin-bottom: 20px;
+}
+
+.skeleton-card__tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.skeleton-card__tags .skeleton {
+  border-radius: 16px;
+}
+
+/* Animations */
+@keyframes skeleton-pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes skeleton-wave {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Dark Mode Support */
+.app.dark .skeleton {
+  background: #374151;
+}
+
+.app.dark .skeleton--wave::before {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+}
+
+.app.dark .skeleton-card {
+  background: #1e293b;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .skeleton--pulse,
+  .skeleton--wave::before {
+    animation: none;
+  }
+  
+  .skeleton {
+    opacity: 0.7;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skeleton-card__content {
+    padding: 20px;
+  }
+  
+  .skeleton-card__image {
+    height: 160px;
+  }
+}
