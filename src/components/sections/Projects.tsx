@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { projects } from '../../data/projects';
-import { Modal, ProjectDetail, Button, Card, Image } from '../ui';
+import { Modal, Button, Card, Image } from '../ui';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 import type { Project } from '../../types';
+import ReactMarkdown from 'react-markdown';
 import './Projects.css';
 
 const Projects: React.FC = () => {
@@ -36,8 +37,6 @@ const Projects: React.FC = () => {
             A showcase of my recent work and technical projects
           </p>
         </div>
-
-
 
         {/* Projects Grid */}
         <div
@@ -146,7 +145,11 @@ const Projects: React.FC = () => {
         onClose={handleCloseModal}
         title={selectedProject?.title}
       >
-        {selectedProject && <ProjectDetail project={selectedProject} />}
+        {selectedProject && (
+          <div className="project-detail-modal">
+            <ReactMarkdown>{selectedProject.longDescription}</ReactMarkdown>
+          </div>
+        )}
       </Modal>
     </section>
   );

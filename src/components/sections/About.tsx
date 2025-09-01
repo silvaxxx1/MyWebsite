@@ -17,8 +17,9 @@ const About: React.FC = () => {
             <div className="about-summary">
               <p>
                 Hi, I’m <strong>Mohammed Sedeg (Silva)</strong>, an AI Engineer & Researcher based in Turkey (open to relocation). 
-                I specialize in building <strong>production-ready AI systems</strong> across <strong>LLMs, computer vision, and robotics</strong>. 
-                I enjoy bridging advanced research with real-world deployment—from training generative LLMs to optimizing low-latency models for edge devices.
+                I specialize in building <strong>production-ready AI systems</strong> across <strong>LLMs, computer vision, and robotics</strong>, 
+                while also deeply enjoying the process of building systems <strong>from scratch</strong> to understand every nut and bolt. 
+                I bridge advanced research with real-world deployment—from training generative LLMs to optimizing low-latency models for edge devices.
               </p>
               
               <p>
@@ -31,13 +32,14 @@ const About: React.FC = () => {
               <p>
                 On the generative AI side, I fine-tune <strong>GPT-2, LLaMA, and other LLMs</strong> using Hugging Face & LoRA, 
                 and build <strong>scalable NLP pipelines</strong> with LangChain, RAG, and FAISS for context-rich generation. 
-                I also focus on <strong>training efficiency and production-readiness</strong>, using PyTorch DDP, AMP, and optimized data loaders to reduce time and cost.
+                I emphasize both <strong>deep understanding of the underlying mechanisms</strong> and <strong>production readiness</strong>, 
+                leveraging PyTorch DDP, AMP, and optimized data loaders to reduce time and cost.
               </p>
 
               <p>
                 I am passionate about pushing AI from concept to production: combining <strong>robotics, edge optimization, and generative AI</strong> 
-                to deliver high-impact, scalable solutions. Sharing knowledge, mentoring, and contributing to <strong>open-source projects</strong> 
-                are also central to my work philosophy.
+                to deliver high-impact, scalable solutions. Whether exploring new architectures from scratch or deploying robust systems in the real world, 
+                I enjoy <strong>mentoring, sharing knowledge, and contributing to open-source projects</strong> as part of my work philosophy.
               </p>
             </div>
           </div>

@@ -28,8 +28,11 @@ const Hero: React.FC = () => {
             </h1>
 
             <p className="hero__description animate-fade-in-up animate-delay-700">
-              AI Engineer & Researcher bridging research and deployment to build impactful AI systems in LLMs, computer vision, and edge AI.
+              I love <strong>building AI systems from the ground up</strong>, exploring the nuts and bolts of LLMs, computer vision, and robotics.  
+              At the same time, I deliver <strong>robust, production-ready solutions</strong> that scale in the real world.  
+              My work bridges <strong>deep research</strong> with <strong>high-impact deployment</strong>, creating AI systems that are both innovative and reliable.
             </p>
+
 
             <div className="hero__stats animate-fade-in-up animate-delay-1000">
               <div className="hero__stat hover-lift">
