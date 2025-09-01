@@ -33,7 +33,6 @@ const Hero: React.FC = () => {
               My work bridges <strong>deep research</strong> with <strong>high-impact deployment</strong>, creating AI systems that are both innovative and reliable.
             </p>
 
-
             <div className="hero__stats animate-fade-in-up animate-delay-1000">
               <div className="hero__stat hover-lift">
                 <span className="hero__stat-number">5+</span>
@@ -63,7 +62,7 @@ const Hero: React.FC = () => {
             </Button>
             {/* Resume Download Button */}
             <a 
-              href="/Mohammed_Sedeg_Resume.pdf" 
+              href={`${import.meta.env.BASE_URL}Mohammed_Sedeg_Resume.pdf`} 
               download 
               className="hero__cta-resume hover-lift"
             >
