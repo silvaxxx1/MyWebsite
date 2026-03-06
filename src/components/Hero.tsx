@@ -1,3 +1,4 @@
+cat > src/components/Hero.tsx << 'EOF'
 import { siteData } from '../data/site';
 import './Hero.css';
 
@@ -7,54 +8,55 @@ export default function Hero() {
       <div className="container hero__inner">
 
         <div className="hero__left">
-          <p className="hero__label mono">Mohammed Sedeg · AI Engineer & Researcher</p>
-
-          <h1 className="hero__headline">
-            {siteData.headline.split('\n').map((line, i) => (
-              <span key={i}>{line}{i === 0 && <br />}</span>
-            ))}
-          </h1>
-
-          <p className="hero__about">{siteData.about}</p>
-
-          <div className="hero__links">
-            <a href="#work" className="hero__cta">
-              View my work
-              <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
-                <path d="M7 1l6 6-6 6M1 7h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </a>
-            <div className="hero__socials">
-              <a href={siteData.links.github} target="_blank" rel="noopener noreferrer" className="hero__social mono">GitHub</a>
-              <span className="hero__sep">·</span>
-              <a href={siteData.links.linkedin} target="_blank" rel="noopener noreferrer" className="hero__social mono">LinkedIn</a>
-              <span className="hero__sep">·</span>
-              <a href={siteData.links.sair} target="_blank" rel="noopener noreferrer" className="hero__social hero__social--sair mono">SAiR 🇸🇩</a>
-            </div>
+          <div className="hero__photo-wrap">
+            <img src="/MyWebsite/ME.png" alt="Mohammed Sedeg" className="hero__photo" />
+            <div className="hero__photo-flag">🇸🇩</div>
+          </div>
+          <div className="hero__identity">
+            <span className="hero__identity-name display">Mohammed Sedeg</span>
+            <span className="hero__identity-sub mono">Khartoum · Turkey · Remote</span>
           </div>
         </div>
 
         <div className="hero__right">
-          <div className="hero__card">
-            <p className="hero__card-label mono">Currently</p>
-            <p className="hero__card-text">{siteData.bio.currently}</p>
+          <p className="hero__eyebrow mono">AI Engineer & Researcher</p>
+          <h1 className="hero__headline">
+            I study how machines learn —<br />
+            <span className="hero__headline-muted">and build systems that actually do.</span>
+          </h1>
+          <div className="hero__bio">
+            <p>I have a deep obsession with intelligence itself — how it emerges, how it scales, and how to build systems that genuinely reason rather than just pattern-match. My work spans LLM systems, computer vision, and edge AI, always anchored in the fundamentals.</p>
+            <p>I also founded <a href={siteData.links.sair} target="_blank" rel="noopener noreferrer" className="hero__sair-link">SAiR</a> because I believe understanding shouldn't be gated — if you can learn it, you should be able to teach it.</p>
           </div>
-          <div className="hero__card">
-            <p className="hero__card-label mono">Location</p>
-            <p className="hero__card-text">{siteData.location}</p>
+          <div className="hero__meta">
+            <div className="hero__meta-item">
+              <span className="hero__meta-label mono">Currently</span>
+              <span className="hero__meta-value">PhD Candidate · Karabük University</span>
+            </div>
+            <div className="hero__meta-item">
+              <span className="hero__meta-label mono">Focus</span>
+              <span className="hero__meta-value">Vision-Language Models · Edge AI</span>
+            </div>
+            <div className="hero__meta-item">
+              <span className="hero__meta-label mono">Open to</span>
+              <span className="hero__meta-value">Senior roles · Research · Consulting</span>
+            </div>
           </div>
-          <div className="hero__card hero__card--sair">
-            <p className="hero__card-label mono">SAiR Initiative</p>
-            <p className="hero__card-text">
-              {siteData.sair.numbers.learners} engineers trained across {siteData.sair.numbers.countries} countries — free, open, ongoing.
-            </p>
-            <a href={siteData.links.telegram} target="_blank" rel="noopener noreferrer" className="hero__card-link mono">
-              Join the community →
+          <div className="hero__actions">
+            <a href="#work" className="hero__cta">
+              See my work
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+                <path d="M2.5 10.5L10.5 2.5M10.5 2.5H5M10.5 2.5V8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
             </a>
+            <a href={`mailto:${siteData.email}`} className="hero__email mono">{siteData.email}</a>
           </div>
-          <div className="hero__card">
-            <p className="hero__card-label mono">Contact</p>
-            <a href={`mailto:${siteData.email}`} className="hero__card-email mono">{siteData.email}</a>
+          <div className="hero__socials">
+            <a href={siteData.links.github} target="_blank" rel="noopener noreferrer" className="hero__social mono">GitHub</a>
+            <span className="hero__dot">·</span>
+            <a href={siteData.links.linkedin} target="_blank" rel="noopener noreferrer" className="hero__social mono">LinkedIn</a>
+            <span className="hero__dot">·</span>
+            <a href={siteData.links.sair} target="_blank" rel="noopener noreferrer" className="hero__social hero__social--sair mono">SAiR 🇸🇩</a>
           </div>
         </div>
 
@@ -62,3 +64,4 @@ export default function Hero() {
     </section>
   );
 }
+EOF
