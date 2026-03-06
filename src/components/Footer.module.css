@@ -1,0 +1,19 @@
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 24px 0;
+  background: var(--bg-soft);
+}
+.inner {
+  display: flex; align-items: center;
+  justify-content: space-between; gap: 16px; flex-wrap: wrap;
+}
+.name {
+  font-family: var(--ff-serif);
+  font-size: 15px; font-weight: 800;
+  color: var(--ink); letter-spacing: -0.01em;
+}
+.copy {
+  font-family: var(--ff-mono); font-size: 12px; color: var(--ink-4);
+}
+.copy a { color: var(--accent); transition: opacity 0.2s; }
+.copy a:hover { opacity: 0.7; }

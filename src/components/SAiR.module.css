@@ -1,0 +1,76 @@
+.section { background: var(--bg-soft); }
+
+.body {
+  display: grid; grid-template-columns: 1.2fr 1fr;
+  gap: 80px; margin-top: 56px; align-items: start;
+}
+
+.quote {
+  font-family: var(--ff-serif);
+  font-size: clamp(20px, 2.5vw, 26px);
+  font-weight: 700; font-style: italic;
+  color: var(--accent); line-height: 1.4;
+  margin-bottom: 28px;
+  padding-left: 20px;
+  border-left: 3px solid var(--accent);
+}
+
+.story { display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px; }
+.story p { font-size: 15px; color: var(--ink-3); line-height: 1.8; }
+
+.numbers {
+  display: flex; gap: 40px;
+  padding: 24px 0;
+  border-top: 1px solid var(--border-md);
+  border-bottom: 1px solid var(--border-md);
+  margin-bottom: 28px;
+}
+.stat { display: flex; flex-direction: column; gap: 4px; }
+.statVal {
+  font-family: var(--ff-serif);
+  font-size: 32px; font-weight: 900;
+  color: var(--ink); line-height: 1; letter-spacing: -0.02em;
+}
+.statLabel {
+  font-family: var(--ff-mono); font-size: 11px;
+  color: var(--ink-4); letter-spacing: 0.06em;
+}
+
+.links { display: flex; gap: 28px; flex-wrap: wrap; }
+.link {
+  font-family: var(--ff-mono); font-size: 13px;
+  color: var(--ink-3); transition: color 0.2s;
+}
+.link:hover { color: var(--accent); }
+
+/* Right col */
+.colLabel {
+  font-family: var(--ff-mono); font-size: 10px;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--ink-4); margin-bottom: 16px; display: block;
+}
+.module {
+  display: flex; align-items: center; gap: 14px;
+  padding: 11px 0; border-bottom: 1px solid var(--border);
+}
+.module:first-of-type { border-top: 1px solid var(--border); }
+.moduleNum {
+  font-family: var(--ff-mono); font-size: 11px;
+  color: var(--accent); opacity: 0.5; min-width: 22px;
+}
+.moduleName { font-size: 14px; color: var(--ink-3); }
+
+.outcome {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 0; border-bottom: 1px solid var(--border);
+  font-size: 13px; color: var(--ink-4);
+}
+.dot {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--accent); opacity: 0.5; flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .body { grid-template-columns: 1fr; gap: 48px; }
+  .numbers { gap: 28px; }
+}

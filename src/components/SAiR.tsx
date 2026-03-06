@@ -1,70 +1,98 @@
-import { useIntersection } from '../hooks/useIntersection';
-import { siteData } from '../data/site';
-import './SAiR.css';
+import { useInView } from '../hooks/useInView'
+import s from './SAiR.module.css'
+
+const modules = [
+  'Python & Mathematical Foundations',
+  'Machine Learning Essentials',
+  'Deep Learning & Neural Networks',
+  'Computer Vision',
+  'NLP & Large Language Models',
+  'MLOps & Production Deployment',
+]
+
+const outcomes = [
+  'Healthcare diagnostic systems',
+  'Crop disease detection (CNN)',
+  'Arabic NLP pipelines',
+  'Production ML deployments',
+]
 
 export default function SAiR() {
-  const { ref, visible } = useIntersection();
+  const { ref, inView } = useInView()
+  const { ref: r2, inView: v2 } = useInView()
 
   return (
-    <section id="sair" className="section sair">
-      <div className="container">
-        <div ref={ref} className={`fade-in ${visible ? 'visible' : ''}`}>
-          <p className="section-label">SAiR Initiative</p>
-          <h2 className="section-title">Sudanese AI Research Organization</h2>
+    <section id="sair" className={s.section}>
+      <div className="wrap">
+        <div ref={ref} className={`reveal ${inView ? 'in' : ''}`}>
+          <span className="s-label">SAiR Initiative</span>
+          <h2 className="s-title">Sudanese AI Research Organization</h2>
         </div>
 
-        <div className={`sair__body fade-in ${visible ? 'visible' : ''} fade-in-delay-2`}>
-          <div className="sair__text">
-            <p className="sair__tagline">"{siteData.sair.tagline}"</p>
-            <div className="sair__desc">
-              {siteData.sair.description.split('\n').map((p, i) =>
-                p.trim() ? <p key={i}>{p.trim()}</p> : null
-              )}
+        <div ref={r2} className={`${s.body} reveal ${v2 ? 'in' : ''} d1`}>
+
+          <div className={s.left}>
+            <blockquote className={s.quote}>
+              "Knowledge is only powerful when it moves."
+            </blockquote>
+
+            <div className={s.story}>
+              <p>
+                I founded SAiR because I kept meeting brilliant people in Sudan and across Africa
+                who had the curiosity but not the access. The resources exist. The talent exists.
+                The gap is structural, not intellectual.
+              </p>
+              <p>
+                SAiR is free, open-source, and built around one idea:
+                if you understand something deeply enough to teach it, you understand it.
+              </p>
             </div>
-            <div className="sair__numbers">
-              <div className="sair__num">
-                <span className="sair__num-value">{siteData.sair.numbers.learners}</span>
-                <span className="sair__num-label mono">engineers trained</span>
+
+            <div className={s.numbers}>
+              <div className={s.stat}>
+                <span className={s.statVal}>300+</span>
+                <span className={s.statLabel}>engineers trained</span>
               </div>
-              <div className="sair__num">
-                <span className="sair__num-value">{siteData.sair.numbers.countries}</span>
-                <span className="sair__num-label mono">countries</span>
+              <div className={s.stat}>
+                <span className={s.statVal}>5</span>
+                <span className={s.statLabel}>countries</span>
               </div>
-              <div className="sair__num">
-                <span className="sair__num-value">{siteData.sair.numbers.modules}</span>
-                <span className="sair__num-label mono">modules · 100% free</span>
+              <div className={s.stat}>
+                <span className={s.statVal}>6</span>
+                <span className={s.statLabel}>modules · free</span>
               </div>
             </div>
-            <div className="sair__actions">
-              <a href={siteData.sair.links.github} target="_blank" rel="noopener noreferrer" className="sair__link mono">
-                GitHub Organization →
+
+            <div className={s.links}>
+              <a href="https://github.com/SAIR-Org" target="_blank" rel="noopener noreferrer" className={s.link}>
+                GitHub Organization ↗
               </a>
-              <a href={siteData.sair.links.telegram} target="_blank" rel="noopener noreferrer" className="sair__link mono">
-                Join on Telegram →
+              <a href="https://t.me/+jPPlO6ZFDbtlYzU0" target="_blank" rel="noopener noreferrer" className={s.link}>
+                Join on Telegram ↗
               </a>
             </div>
           </div>
 
-          <div className="sair__curriculum">
-            <p className="sair__curr-label mono">Curriculum</p>
-            {siteData.sair.modules.map((m, i) => (
-              <div key={i} className="sair__module">
-                <span className="sair__module-num mono">0{i + 1}</span>
-                <span className="sair__module-name">{m}</span>
+          <div className={s.right}>
+            <p className={s.colLabel}>Curriculum</p>
+            {modules.map((m, i) => (
+              <div key={i} className={s.module}>
+                <span className={s.moduleNum}>0{i + 1}</span>
+                <span className={s.moduleName}>{m}</span>
               </div>
             ))}
-            <div className="sair__outcomes">
-              <p className="sair__curr-label mono" style={{marginTop: 28}}>Student projects shipped</p>
-              {siteData.sair.outcomes.map((o, i) => (
-                <div key={i} className="sair__outcome">
-                  <span className="sair__outcome-dot" />
-                  <span>{o}</span>
-                </div>
-              ))}
-            </div>
+
+            <p className={s.colLabel} style={{ marginTop: 28 }}>Student projects shipped</p>
+            {outcomes.map((o, i) => (
+              <div key={i} className={s.outcome}>
+                <span className={s.dot} />
+                <span>{o}</span>
+              </div>
+            ))}
           </div>
+
         </div>
       </div>
     </section>
-  );
+  )
 }

@@ -1,11 +1,11 @@
-import './styles/globals.css';
-import Nav from './components/Nav';
-import Hero from './components/Hero';
-import Systems from './components/Systems';
-import SAiR from './components/SAiR';
-import Experience from './components/Experience';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import './styles/globals.css'
+import Nav     from './components/Nav'
+import Hero    from './components/Hero'
+import Work    from './components/Work'
+import SAiR    from './components/SAiR'
+import About   from './components/About'
+import Contact from './components/Contact'
+import Footer  from './components/Footer'
 
 export default function App() {
   return (
@@ -13,16 +13,16 @@ export default function App() {
       <Nav />
       <main>
         <Hero />
-        <div className="divider" />
-        <Systems />
-        <div className="divider" />
+        <hr />
+        <Work />
+        <hr />
         <SAiR />
-        <div className="divider" />
-        <Experience />
-        <div className="divider" />
+        <hr />
+        <About />
+        <hr />
         <Contact />
       </main>
       <Footer />
     </>
-  );
+  )
 }
