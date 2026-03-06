@@ -1,4 +1,3 @@
-cat > src/components/Hero.tsx << 'EOF'
 import { siteData } from '../data/site';
 import './Hero.css';
 
@@ -64,4 +63,3 @@ export default function Hero() {
     </section>
   );
 }
-EOF
