@@ -4,7 +4,6 @@ import './Hero.css';
 export default function Hero() {
   return (
     <section id="hero" className="hero">
-      <div className="hero__glow" />
       <div className="container hero__inner">
 
         <div className="hero__left">
@@ -21,7 +20,7 @@ export default function Hero() {
           <div className="hero__links">
             <a href="#work" className="hero__cta">
               View my work
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
                 <path d="M7 1l6 6-6 6M1 7h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </a>
@@ -49,7 +48,7 @@ export default function Hero() {
             <p className="hero__card-text">
               {siteData.sair.numbers.learners} engineers trained across {siteData.sair.numbers.countries} countries — free, open, ongoing.
             </p>
-            <a href={siteData.links.sair} target="_blank" rel="noopener noreferrer" className="hero__card-link mono">
+            <a href={siteData.links.telegram} target="_blank" rel="noopener noreferrer" className="hero__card-link mono">
               Join the community →
             </a>
           </div>

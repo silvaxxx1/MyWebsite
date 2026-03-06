@@ -5,145 +5,116 @@
 }
 
 :root {
-  --bg-primary: #060A12;
-  --bg-secondary: #0C1220;
-  --bg-card: #0F1828;
-  --bg-card-hover: #141E30;
-  --border: #1A2540;
-  --border-bright: #243050;
-  --cyan: #00E5FF;
-  --cyan-dim: rgba(0, 229, 255, 0.12);
-  --cyan-glow: rgba(0, 229, 255, 0.25);
-  --amber: #F5A623;
-  --amber-dim: rgba(245, 166, 35, 0.1);
-  --green: #39FF14;
-  --green-dim: rgba(57, 255, 20, 0.1);
-  --text-primary: #E8EDF5;
-  --text-secondary: #7A8BA8;
-  --text-muted: #4A5568;
-  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  /* Paper palette */
+  --bg:          #F8F6F1;
+  --bg-raised:   #F2EFE9;
+  --bg-sunken:   #EDE9E2;
+  --border:      #DDD9D2;
+  --border-dark: #C8C3BB;
+
+  /* Ink palette */
+  --ink-1:    #1A1814;
+  --ink-2:    #3D3A35;
+  --ink-3:    #6B6760;
+  --ink-4:    #9E9A94;
+
+  /* Accents */
+  --navy:     #1E3A5F;
+  --navy-dim: rgba(30, 58, 95, 0.07);
+  --sienna:   #B85C2C;
+  --sienna-dim: rgba(184, 92, 44, 0.08);
+
+  /* Fonts */
   --font-display: 'Syne', sans-serif;
-  --font-body: 'DM Sans', sans-serif;
-  --radius: 4px;
-  --radius-lg: 8px;
+  --font-body:    'DM Sans', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  --radius:    3px;
+  --radius-lg: 6px;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+  background-color: var(--bg);
+  color: var(--ink-1);
   font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.6;
   overflow-x: hidden;
-  cursor: default;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Scrollbar */
 ::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: var(--bg-primary); }
-::-webkit-scrollbar-thumb { background: var(--border-bright); border-radius: 2px; }
-::-webkit-scrollbar-thumb:hover { background: var(--cyan); }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border-dark); border-radius: 2px; }
 
-/* Selection */
-::selection { background: var(--cyan-dim); color: var(--cyan); }
-
-/* Grid texture overlay */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: 
-    linear-gradient(rgba(0, 229, 255, 0.015) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 229, 255, 0.015) 1px, transparent 1px);
-  background-size: 60px 60px;
-  pointer-events: none;
-  z-index: 0;
-}
+::selection { background: rgba(30,58,95,0.1); color: var(--navy); }
 
 a {
-  color: var(--cyan);
+  color: var(--navy);
   text-decoration: none;
   transition: opacity 0.2s;
 }
-a:hover { opacity: 0.75; }
+a:hover { opacity: 0.6; }
 
-/* Utility classes */
 .mono { font-family: var(--font-mono); }
 .display { font-family: var(--font-display); }
 
 .section {
   position: relative;
-  z-index: 1;
   padding: 100px 0;
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1080px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 32px;
 }
 
 .section-label {
   font-family: var(--font-mono);
   font-size: 11px;
   font-weight: 500;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--cyan);
-  margin-bottom: 12px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.section-label::after {
-  content: '';
-  flex: 1;
-  max-width: 60px;
-  height: 1px;
-  background: var(--cyan);
-  opacity: 0.4;
+  color: var(--ink-4);
+  margin-bottom: 14px;
 }
 
 .section-title {
   font-family: var(--font-display);
-  font-size: clamp(28px, 4vw, 42px);
+  font-size: clamp(26px, 3.5vw, 38px);
   font-weight: 800;
-  color: var(--text-primary);
+  color: var(--ink-1);
   line-height: 1.1;
-  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
 }
 
 .section-subtitle {
   font-size: 16px;
-  color: var(--text-secondary);
+  color: var(--ink-3);
   max-width: 520px;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
-/* Card */
-.card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 28px;
-  transition: border-color 0.3s, transform 0.3s, background 0.3s;
+.divider {
+  height: 1px;
+  background: var(--border);
 }
-.card:hover {
-  border-color: var(--border-bright);
-  background: var(--bg-card-hover);
-  transform: translateY(-2px);
-}
-.card:hover .card-accent {
-  opacity: 1;
-}
-.card-accent {
+
+/* Fade-in animations */
+.fade-in {
   opacity: 0;
-  transition: opacity 0.3s;
+  transform: translateY(18px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
 }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+.fade-in-delay-1 { transition-delay: 0.08s; }
+.fade-in-delay-2 { transition-delay: 0.16s; }
+.fade-in-delay-3 { transition-delay: 0.24s; }
+.fade-in-delay-4 { transition-delay: 0.32s; }
 
 /* Buttons */
 .btn {
@@ -153,53 +124,25 @@ a:hover { opacity: 0.75; }
   padding: 10px 20px;
   border-radius: var(--radius);
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   cursor: pointer;
   transition: all 0.2s;
   border: none;
+  text-decoration: none;
 }
 .btn-primary {
-  background: var(--cyan);
-  color: var(--bg-primary);
+  background: var(--navy);
+  color: #fff;
 }
-.btn-primary:hover {
-  background: #00BFCC;
-  transform: translateY(-1px);
-}
+.btn-primary:hover { background: #162d4a; opacity: 1; }
 .btn-outline {
   background: transparent;
-  color: var(--cyan);
-  border: 1px solid var(--cyan);
+  color: var(--navy);
+  border: 1px solid var(--navy);
 }
-.btn-outline:hover {
-  background: var(--cyan-dim);
-  transform: translateY(-1px);
-}
-
-/* Fade in animations */
-.fade-in {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-.fade-in-delay-1 { transition-delay: 0.1s; }
-.fade-in-delay-2 { transition-delay: 0.2s; }
-.fade-in-delay-3 { transition-delay: 0.3s; }
-.fade-in-delay-4 { transition-delay: 0.4s; }
-.fade-in-delay-5 { transition-delay: 0.5s; }
-
-/* Divider */
-.divider {
-  height: 1px;
-  background: var(--border);
-  margin: 0;
-}
+.btn-outline:hover { background: var(--navy-dim); opacity: 1; }
 
 @media (max-width: 768px) {
   .section { padding: 72px 0; }
