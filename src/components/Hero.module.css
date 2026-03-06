@@ -137,3 +137,11 @@
   .hero { padding: 100px 0 60px; }
   .name { font-size: clamp(42px, 12vw, 60px); }
 }
+
+.btnCV {
+  font-family: var(--ff-mono); font-size: 13px;
+  color: var(--accent); border: 1px solid var(--accent-md);
+  padding: 11px 24px; border-radius: var(--r);
+  transition: border-color 0.2s, background 0.2s;
+}
+.btnCV:hover { border-color: var(--accent); background: var(--accent-lt); }

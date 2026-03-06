@@ -49,6 +49,7 @@ export default function Hero() {
           <div className={s.actions}>
             <a href="#work" className={s.btnPrimary}>View my work</a>
             <a href="mailto:silvapi1994@gmail.com" className={s.btnGhost}>Get in touch</a>
+            <a href="/MyWebsite/cv.pdf" download="Mohammed_Sedeg_CV.pdf" className={s.btnCV}>Download CV ↓</a>
           </div>
 
           <div className={s.socials}>
