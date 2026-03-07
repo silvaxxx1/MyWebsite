@@ -18,6 +18,34 @@
 }
 .email:hover { color: var(--accent); }
 
+.scheduleButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  font-family: var(--ff-sans);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--bg);
+  background: var(--accent);
+  border: none;
+  border-radius: var(--r);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s var(--ease-out);
+  box-shadow: 0 2px 8px rgba(180, 83, 9, 0.2);
+}
+
+.scheduleButton:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(180, 83, 9, 0.3);
+}
+
+.scheduleButton:active {
+  transform: translateY(0);
+}
+
 .links {
   display: flex; gap: 28px; flex-wrap: wrap;
   padding-top: 24px; border-top: 1px solid var(--border-md);

@@ -1,0 +1,11 @@
+.typing {
+  display: inline;
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  margin-left: 2px;
+  color: var(--accent);
+  font-weight: 300;
+}

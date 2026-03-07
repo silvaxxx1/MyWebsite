@@ -1,0 +1,5 @@
+.counter {
+  font-family: var(--ff-serif);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}

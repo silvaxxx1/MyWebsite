@@ -1,0 +1,31 @@
+.badge {
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  color: var(--badge-color, var(--accent));
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.badge::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--badge-color, var(--accent));
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.badge:hover::before {
+  opacity: 0.1;
+}
+
+.badge span {
+  position: relative;
+  z-index: 1;
+}

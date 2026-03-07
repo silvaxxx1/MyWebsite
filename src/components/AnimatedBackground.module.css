@@ -1,0 +1,47 @@
+.background {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.gradient1,
+.gradient2,
+.gradient3 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+}
+
+.gradient1 {
+  width: 600px;
+  height: 600px;
+  background: var(--gradient-hero);
+  top: -200px;
+  right: -200px;
+}
+
+.gradient2 {
+  width: 500px;
+  height: 500px;
+  background: var(--gradient-subtle);
+  bottom: -150px;
+  left: -150px;
+}
+
+.gradient3 {
+  width: 400px;
+  height: 400px;
+  background: var(--gradient-warm);
+  top: 50%;
+  left: 50%;
+  opacity: 0.2;
+}
+
+@media (max-width: 768px) {
+  .gradient1 { width: 400px; height: 400px; }
+  .gradient2 { width: 300px; height: 300px; }
+  .gradient3 { width: 250px; height: 250px; }
+}

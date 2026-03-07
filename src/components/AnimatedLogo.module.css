@@ -1,0 +1,52 @@
+.logoContainer {
+  font-family: var(--ff-serif);
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.3s;
+}
+
+.logoContainer:hover {
+  color: var(--accent);
+}
+
+.firstName {
+  background: linear-gradient(
+    90deg,
+    var(--ink) 0%,
+    var(--ink-2) 50%,
+    var(--ink) 100%
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline;
+}
+
+.lastName {
+  font-style: italic;
+  color: var(--accent);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  background: var(--accent);
+  margin-left: 2px;
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  .logoContainer {
+    font-size: 16px;
+  }
+}
