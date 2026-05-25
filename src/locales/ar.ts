@@ -184,7 +184,7 @@ export const ar = {
     linkedin: 'لينكد إن ↗',
     sair: 'منظمة ساير ↗',
     telegram: 'تيليجرام ↗',
-    scheduleButton: 'احجز مكالمة مجانية',
+    scheduleButton: 'احجز مكالمة',
   },
 
   // Footer
