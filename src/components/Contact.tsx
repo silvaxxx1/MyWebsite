@@ -23,7 +23,9 @@ export default function Contact() {
           </a>
 
           <a
-            href="mailto:silvapi1994@gmail.com"
+            href="https://calendly.com/silvapi1994/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             className={s.scheduleButton}
           >
             {t.contact.scheduleButton}

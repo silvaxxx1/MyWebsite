@@ -184,7 +184,7 @@ export const en = {
     linkedin: 'LinkedIn ↗',
     sair: 'SAiR Organization ↗',
     telegram: 'Telegram ↗',
-    scheduleButton: 'Email Me Directly',
+    scheduleButton: 'Schedule a Free Call',
   },
 
   // Footer
