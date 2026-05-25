@@ -4,7 +4,7 @@
 }
 
 .bio { display: flex; flex-direction: column; gap: 16px; margin-bottom: 48px; }
-.bio p { font-size: 16px; color: var(--ink-3); line-height: 1.85; }
+.bio p { font-size: 1rem; color: var(--ink-3); line-height: 1.85; max-width: 65ch; }
 
 .blockLabel {
   font-family: var(--ff-mono); font-size: 10px;
@@ -39,4 +39,14 @@
 
 @media (max-width: 900px) {
   .body { grid-template-columns: 1fr; gap: 48px; }
+}
+
+@media (max-width: 480px) {
+  .skillRow {
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-start;
+  }
+  .skillCat { min-width: unset; }
+  .skillItems { font-size: 13px; }
 }

@@ -12,7 +12,7 @@
 .email {
   font-family: var(--ff-serif);
   font-size: clamp(28px, 5vw, 52px);
-  font-weight: 900; color: var(--ink);
+  font-weight: 800; color: var(--ink);
   letter-spacing: -0.025em; line-height: 1;
   transition: color 0.2s; display: inline-block;
 }
@@ -24,7 +24,7 @@
   justify-content: center;
   padding: 16px 32px;
   font-family: var(--ff-sans);
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--bg);
   background: var(--accent);
@@ -55,3 +55,8 @@
   color: var(--ink-4); transition: color 0.2s;
 }
 .links a:hover { color: var(--ink); }
+
+@media (max-width: 600px) {
+  .scheduleButton { width: 100%; }
+  .email { font-size: clamp(22px, 8vw, 36px); }
+}
