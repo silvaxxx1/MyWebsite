@@ -15,6 +15,7 @@ export default function App() {
     <LanguageProvider>
       <ThemeProvider>
         <AnimatedBackground />
+        <a href="#work" className="skip-link">Skip to content</a>
         <Nav />
         <main>
           <Hero />

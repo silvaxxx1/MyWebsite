@@ -62,7 +62,7 @@ export const en = {
         summary: 'Full-stack 5-agent async pipeline for conversational commerce — Guard → Classification → Details/Order/Recommendation — with RAG over ChromaDB, SSE streaming, SQLite session persistence, and a live observability dashboard. Shipped with 160 passing tests and 80% LLM eval pass-rate gating CI/CD.',
         story: "Most chatbots are one prompt and a reply. I wanted to build what a real production multi-agent system actually looks like: strict agent routing, session persistence, streaming responses, and evals that gate the build. Llama-3.3-70B via Groq keeps it provider-agnostic. The eval gate is what made it feel like a real production system — if the model regresses, the deploy fails.",
         stack: ['FastAPI', 'React Native', 'ChromaDB', 'Groq', 'Llama-3.3-70B', 'SSE', 'GitHub Actions'],
-        link: 'https://github.com/silvaxxx1',
+        link: 'https://github.com/silvaxxx1/Cafe.AI',
       },
       {
         type: 'Production System',

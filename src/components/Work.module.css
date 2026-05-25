@@ -13,11 +13,8 @@
 }
 .project:first-child { border-top: 1px solid var(--border); }
 .project:hover {
-  padding-left: 10px;
-  background: var(--glass-bg);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
-  box-shadow: var(--glass-shadow);
+  background: var(--bg-soft);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
   border-radius: var(--r-lg);
   padding: 44px 24px;
   margin: 0 -24px;
@@ -31,8 +28,8 @@
   letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent);
 }
 .typeProduction { color: var(--accent); }
-.typeResearch   { color: #60a5fa; }
-.typeSystems    { color: #a78bfa; }
+.typeResearch   { color: var(--color-research); }
+.typeSystems    { color: var(--color-systems); }
 .projectYear {
   font-family: var(--ff-mono); font-size: 11px; color: var(--ink-4);
 }
