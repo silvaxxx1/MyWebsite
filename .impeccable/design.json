@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-26T00:00:00Z",
+  "title": "Design System: Mohammed Sedeg Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "forge-amber":     { "role": "primary",  "displayName": "Forge Amber",      "canonical": "oklch(0.53 0.155 55)",  "tonalRamp": ["#3D1A00","#6B2D00","#924009","#B45309","#CC7525","#E09850","#F0C080","#FDE8C0"] },
+      "forge-amber-light":{ "role": "primary", "displayName": "Forge Amber (dark mode)", "canonical": "oklch(0.72 0.16 75)", "tonalRamp": ["#7A4A00","#A86200","#CC7D00","#F59E0B","#FBBF24","#FCD34D","#FDE68A","#FEF9C3"] },
+      "warm-ash-paper":  { "role": "neutral",  "displayName": "Warm Ash Paper",   "canonical": "oklch(0.977 0.005 55)", "tonalRamp": ["#E8E3DB","#EDE9E2","#F0EDE7","#F3F0EA","#F6F4EF","#F8F7F3","#FAFAF8","#FDFCFB"] },
+      "old-page":        { "role": "neutral",  "displayName": "Old Page",          "canonical": "oklch(0.955 0.008 55)", "tonalRamp": ["#D4CEC5","#DDD8D0","#E4E0D9","#E8E3DB","#EDE9E2","#F0EDE7","#F3F0EA","#F6F4EF"] },
+      "archive-ink":     { "role": "neutral",  "displayName": "Archive Ink",       "canonical": "oklch(0.19 0.008 55)",  "tonalRamp": ["#0A0907","#1C1917","#2A2724","#44403C","#5C5855","#78716C","#A8A29E","#D4CEC5"] },
+      "badge-research":  { "role": "secondary","displayName": "Research Blue",     "canonical": "oklch(0.49 0.22 260)",  "tonalRamp": ["#1E3A8A","#1D4ED8","#2563EB","#3B82F6","#60A5FA","#93C5FD","#BFDBFE","#EFF6FF"] },
+      "badge-systems":   { "role": "tertiary", "displayName": "Systems Purple",    "canonical": "oklch(0.44 0.23 305)",  "tonalRamp": ["#4C1D95","#6D28D9","#7C3AED","#8B5CF6","#A78BFA","#C4B5FD","#DDD6FE","#EDE9FE"] }
+    },
+    "typographyMeta": {
+      "display":  { "displayName": "Display",  "purpose": "Hero name only. Split: regular first name, Spectral italic Forge Amber last name." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles (Work, SAiR, About, Contact). No italic." },
+      "title":    { "displayName": "Title",    "purpose": "Project titles within Work section." },
+      "body":     { "displayName": "Body",     "purpose": "All narrative text. Max 65ch on unconstrained layouts." },
+      "label":    { "displayName": "Label",    "purpose": "Section kicker labels. Mono, uppercase, Forge Amber, sparse." }
+    },
+    "shadows": [
+      { "name": "portrait",   "value": "0 20px 60px rgba(28,25,23,0.15), 0 8px 24px rgba(28,25,23,0.1)", "purpose": "Hero photo frame only. Warm shadow preserves parchment tone." },
+      { "name": "hover-lift", "value": "0 2px 16px rgba(0,0,0,0.06)",                                    "purpose": "Project row hover. Near-invisible confirmation of interactivity." },
+      { "name": "cta-glow",   "value": "0 2px 8px rgba(180,83,9,0.2)",                                   "purpose": "Forge Amber CTA button at rest." },
+      { "name": "cta-glow-hover", "value": "0 4px 16px rgba(180,83,9,0.3)",                              "purpose": "Forge Amber CTA button on hover." }
+    ],
+    "motion": [
+      { "name": "ease-out-standard", "value": "cubic-bezier(0.215, 0.61, 0.355, 1)", "purpose": "Default state transitions (background, color, border)." },
+      { "name": "ease-out-quint",    "value": "cubic-bezier(0.22, 1, 0.36, 1)",       "purpose": "Entrance animations and emphasis transitions. Smooth exit, no overshoot." },
+      { "name": "duration-fast",     "value": "0.2s", "purpose": "Hover colour shifts." },
+      { "name": "duration-base",     "value": "0.4s", "purpose": "State transitions." },
+      { "name": "duration-slow",     "value": "0.6s", "purpose": "Page-load reveals." }
+    ],
+    "breakpoints": [
+      { "name": "mobile-sm",  "value": "480px",  "note": "Skill rows stack vertically; contact button full-width." },
+      { "name": "mobile",     "value": "600px",  "note": "Contact email size reduced; hero buttons stack." },
+      { "name": "tablet",     "value": "768px",  "note": "Nav collapses to hamburger; section padding tightens." },
+      { "name": "desktop-md", "value": "900px",  "note": "About and SAiR two-column grids collapse to single column." },
+      { "name": "desktop",    "value": "1024px", "note": "Hero switches from stacked to side-by-side photo+text." }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main CTA. Archive Ink background shifts to Forge Amber on hover.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#work\"><span>View my work</span><span class=\"ds-btn-arrow\">→</span></a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 24px; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600; color: #FAFAF8; background: #1C1917; border: 2px solid #1C1917; border-radius: 6px; text-decoration: none; transition: background 0.2s cubic-bezier(0.215,0.61,0.355,1), border-color 0.2s cubic-bezier(0.215,0.61,0.355,1); cursor: pointer; } .ds-btn-primary:hover { background: #B45309; border-color: #B45309; } .ds-btn-primary:focus-visible { outline: 2px solid #B45309; outline-offset: 2px; } .ds-btn-arrow { transition: transform 0.2s; } .ds-btn-primary:hover .ds-btn-arrow { transform: translateX(4px); }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary action. Transparent with Archive Ink border.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"mailto:silvapi1994@gmail.com\">Get in touch</a>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; padding: 14px 24px; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600; color: #1C1917; background: transparent; border: 2px solid #1C1917; border-radius: 6px; text-decoration: none; transition: border-color 0.2s, color 0.2s; cursor: pointer; } .ds-btn-ghost:hover { border-color: #B45309; color: #B45309; } .ds-btn-ghost:focus-visible { outline: 2px solid #B45309; outline-offset: 2px; }"
+    },
+    {
+      "name": "CTA Button (Forge Amber)",
+      "kind": "button",
+      "refersTo": "button-cta",
+      "description": "Amber CTA for download and calendar actions. Amber glow shadow.",
+      "html": "<a class=\"ds-btn-cta\" href=\"https://calendly.com/silvapi1994/30min\" target=\"_blank\">Schedule a Call</a>",
+      "css": ".ds-btn-cta { display: inline-flex; align-items: center; justify-content: center; padding: 16px 32px; font-family: 'Figtree', system-ui, sans-serif; font-size: 1rem; font-weight: 600; color: #FFFFFF; background: #B45309; border: none; border-radius: 6px; text-decoration: none; box-shadow: 0 2px 8px rgba(180,83,9,0.2); transition: transform 0.2s cubic-bezier(0.215,0.61,0.355,1), box-shadow 0.2s; cursor: pointer; } .ds-btn-cta:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(180,83,9,0.3); } .ds-btn-cta:active { transform: translateY(0); } .ds-btn-cta:focus-visible { outline: 2px solid #B45309; outline-offset: 2px; }"
+    },
+    {
+      "name": "Stack Chip Tag",
+      "kind": "chip",
+      "refersTo": "chip-tag",
+      "description": "Tech stack tags on project rows. Shift to amber tint on parent hover.",
+      "html": "<span class=\"ds-chip\">PyTorch</span>",
+      "css": ".ds-chip { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #A8A29E; background: #F3F0EA; border: 1px solid #E8E3DB; border-radius: 4px; padding: 3px 10px; letter-spacing: 0.03em; transition: background 0.2s, color 0.2s, border-color 0.2s; } .ds-chip:hover, .ds-project-row:hover .ds-chip { background: rgba(180,83,9,0.08); border-color: rgba(180,83,9,0.2); color: #B45309; }"
+    },
+    {
+      "name": "Info Pill",
+      "kind": "chip",
+      "refersTo": "pill-info",
+      "description": "Hero metadata labels. Static, no hover. Reads as a filing tag.",
+      "html": "<span class=\"ds-pill\">🎓 PhD Candidate</span>",
+      "css": ".ds-pill { display: inline-flex; align-items: center; gap: 6px; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; color: #78716C; background: #F3F0EA; border: 1px solid #E8E3DB; border-radius: 100px; padding: 8px 16px; letter-spacing: 0.04em; }"
+    },
+    {
+      "name": "Project Link",
+      "kind": "custom",
+      "refersTo": "project-link",
+      "description": "Bordered amber link paired with each project entry.",
+      "html": "<a class=\"ds-project-link\" href=\"#\" target=\"_blank\">View ↗</a>",
+      "css": ".ds-project-link { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #B45309; border: 1px solid rgba(180,83,9,0.2); border-radius: 6px; padding: 8px 14px; text-decoration: none; white-space: nowrap; transition: background 0.2s, border-color 0.2s, transform 0.2s cubic-bezier(0.215,0.61,0.355,1); display: inline-block; } .ds-project-link:hover { background: rgba(180,83,9,0.08); border-color: #B45309; transform: translateY(-2px); } .ds-project-link:focus-visible { outline: 2px solid #B45309; outline-offset: 2px; }"
+    },
+    {
+      "name": "Section Label",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Mono uppercase kicker above every section heading. Forge Amber. Sparse.",
+      "html": "<span class=\"ds-label\">Work</span>",
+      "css": ".ds-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #B45309; display: block; margin-bottom: 14px; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "Fixed top nav. Transparent at top; blurred on scroll (purposeful, not decorative).",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-logo\" href=\"#top\">Mohammed <em>Sedeg</em></a><div class=\"ds-nav-links\"><a class=\"ds-nav-link\" href=\"#work\">Work</a><a class=\"ds-nav-link\" href=\"#sair\">SAiR</a><a class=\"ds-nav-link\" href=\"#about\">About</a><a class=\"ds-nav-link\" href=\"#contact\">Contact</a></div></nav>",
+      "css": ".ds-nav { position: fixed; top: 0; left: 0; right: 0; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; transition: background 0.3s, border-color 0.3s; border-bottom: 1px solid transparent; z-index: 100; } .ds-nav-logo { font-family: 'Spectral', Georgia, serif; font-size: 18px; font-weight: 800; color: #1C1917; letter-spacing: -0.02em; text-decoration: none; } .ds-nav-logo em { font-style: italic; color: #B45309; } .ds-nav-links { display: flex; gap: 4px; } .ds-nav-link { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #78716C; padding: 6px 12px; border-radius: 6px; text-decoration: none; letter-spacing: 0.04em; transition: color 0.2s, background 0.2s; } .ds-nav-link:hover { color: #1C1917; background: #F3F0EA; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Engineer's Notebook",
+    "overview": "A portfolio that reads like a notebook left open on a desk: precise annotations in the margins, amber highlights on the lines that matter, warm paper underneath everything. The system rewards close reading. Every element has a reason to be there; decoration is not a reason. The human dimension comes from the writing and the story, not from the chrome.\n\nThis is a system for someone who writes pure-PyTorch autograd engines from scratch and also founded a free AI research organisation in Sudan. That combination, rigorous and generous, technical and personal, is the throughline. The typography asserts authority; the amber accent signals warmth. Neither dominates.\n\nWhat this system explicitly rejects: the dark dev portfolio template (black background, neon green or purple, terminal rain, floating code snippets), the generic SaaS landing page (gradient text, hero-metric stat blocks, AI-generated copy feel), and the overdesigned creative agency site (scroll-jacking, WebGL heroes, motion for motion's sake).",
+    "keyCharacteristics": [
+      "Warm parchment surfaces, not clinical white",
+      "Forge Amber used sparingly: headings, accents, interactive highlights only",
+      "Spectral italic for the signature moment; Figtree carries the argument",
+      "JetBrains Mono for all metadata, labels, and technical tags",
+      "Flat by default; depth through tonal layering, not shadows",
+      "Motion is purposeful and exits smoothly; no bounce, no overshooting"
+    ],
+    "rules": [
+      { "name": "The Forge Rule",             "body": "Forge Amber appears on ≤10% of any screen. Every additional use dilutes the signal. When in doubt, use Archive Ink or Ink Body instead.", "section": "colors" },
+      { "name": "The Warmth Rule",            "body": "No pure black (#000), no pure white (#FFF). Every neutral is tinted toward the amber hue. If a neutral reads as cool or clinical on the warm parchment background, it is wrong.", "section": "colors" },
+      { "name": "The Spectral Signature Rule","body": "Spectral italic appears in exactly two places: the hero last name and the italic story paragraphs. It does not appear in headings, body copy, or UI labels.", "section": "typography" },
+      { "name": "The Mono as Metadata Rule",  "body": "JetBrains Mono signals technical metadata, never emphasis. If text needs emphasis, use Spectral or weight. Mono is not a substitute for visual hierarchy.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule",   "body": "If a surface elevation can be expressed through background colour (Warm Ash Paper vs Old Page), it must be. Shadows are reserved for portrait photography, hover confirmation, and the amber CTA.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use Forge Amber on ≤10% of any screen. Rarity is the signal.",
+      "Do tint every neutral toward the amber hue. No cool neutrals.",
+      "Do use Spectral italic exclusively for the hero last name and italic story paragraphs.",
+      "Do cap body text line length at 65ch on unconstrained layouts.",
+      "Do use tonal layering (Warm Ash Paper → Old Page) before reaching for shadows.",
+      "Do honour the Arabic RTL context: Cairo font, dir=rtl, direction-aware spacing.",
+      "Do ease out with cubic-bezier(0.22, 1, 0.36, 1). Nothing overshoots.",
+      "Do respect prefers-reduced-motion. All animation durations collapse to 0.01ms."
+    ],
+    "donts": [
+      "Don't use a side-stripe border (border-left or border-right > 1px as a coloured accent). Use a background tint and border-radius instead.",
+      "Don't use gradient text (background-clip: text). Emphasis through weight or Forge Amber solid colour.",
+      "Don't use glassmorphism decoratively. Backdrop-filter permitted only on the scrolled nav bar.",
+      "Don't build a hero-metric template: big number, small label, gradient accent.",
+      "Don't use bounce or elastic easing. No cubic-bezier with overshoot. No spring animations.",
+      "Don't add floating particles, animated code rain, or atmospheric particle effects.",
+      "Don't make the site look like a SaaS landing page: no feature grids with identical icon+heading+text cards.",
+      "Don't use Inter, Playfair Display, Fraunces, Cormorant, DM Sans, or Space Grotesk.",
+      "Don't use font-weight: 900. Spectral's maximum is 800.",
+      "Don't animate width, height, padding, or margin directly. Use transform or grid-template-rows."
+    ]
+  }
+}
