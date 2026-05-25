@@ -24,14 +24,14 @@ const itemVariants: Variants = {
 }
 
 const photoVariants: Variants = {
-  hidden: { opacity: 0, scale: 0.9, rotate: -5 },
+  hidden: { opacity: 0, scale: 0.95, rotate: -3 },
   visible: {
     opacity: 1,
     scale: 1,
     rotate: 0,
     transition: {
       duration: 0.8,
-      ease: [0.34, 1.56, 0.64, 1]
+      ease: [0.22, 1, 0.36, 1]
     }
   }
 }
@@ -58,30 +58,6 @@ export default function Hero() {
           ease: 'linear',
         }}
       />
-
-      {/* Floating particles */}
-      <div className={s.particles}>
-        {[...Array(6)].map((_, i) => (
-          <motion.div
-            key={i}
-            className={s.particle}
-            animate={{
-              y: [0, -30, 0],
-              opacity: [0.3, 0.6, 0.3],
-            }}
-            transition={{
-              duration: 3 + i * 0.5,
-              repeat: Infinity,
-              ease: 'easeInOut',
-              delay: i * 0.2,
-            }}
-            style={{
-              left: `${10 + i * 15}%`,
-              top: `${20 + (i % 3) * 20}%`,
-            }}
-          />
-        ))}
-      </div>
 
       <motion.div
         ref={ref}

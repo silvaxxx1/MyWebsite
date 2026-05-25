@@ -11,15 +11,15 @@
 }
 
 .quote {
-  font-family: var(--accent);
   font-size: clamp(18px, 2.5vw, 20px);
   font-weight: 700;
   font-style: italic;
   color: var(--accent);
   line-height: 1.4;
   margin-bottom: 28px;
-  padding-inline-start: 20px;
-  border-inline-start: 3px solid var(--accent);
+  padding: 14px 20px;
+  background: var(--accent-lt);
+  border-radius: var(--r);
 }
 
 .story {
