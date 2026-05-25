@@ -16,15 +16,7 @@
 }
 
 .firstName {
-  background: linear-gradient(
-    90deg,
-    var(--ink) 0%,
-    var(--ink-2) 50%,
-    var(--ink) 100%
-  );
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  background-clip: text;
+  color: var(--ink);
   display: inline;
 }
 

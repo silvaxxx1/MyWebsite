@@ -4,7 +4,7 @@
   /* === Base Colors === */
   --bg:        #FAFAF8;
   --bg-soft:   #F3F0EA;
-  --bg-card:   #FFFFFF;
+  --bg-card:   #FAFAF8;
   --border:    #E8E3DB;
   --border-md: #D4CEC5;
 
@@ -178,7 +178,7 @@ html[dir="rtl"] {
 html[dir="rtl"] [lang="en"],
 html[dir="rtl"] .en-text {
   direction: ltr;
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Figtree', system-ui, sans-serif;
 }
 
 /* Subtle warm paper texture */

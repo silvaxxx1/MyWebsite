@@ -49,31 +49,11 @@ export default function AnimatedLogo({ className = '', typing = true }: Animated
       transition={{ duration: 0.5 }}
       key={language} // Re-animate when language changes
     >
-      <motion.span
-        className={s.firstName}
-        animate={{
-          backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
-        }}
-        transition={{
-          duration: 5,
-          repeat: Infinity,
-          ease: 'linear',
-        }}
-      >
+      <span className={s.firstName}>
         {displayFirstName}
-      </motion.span>
+      </span>
       {' '}
-      <motion.span
-        className={s.lastName}
-        animate={{
-          y: [0, -3, 0],
-        }}
-        transition={{
-          duration: 2,
-          repeat: Infinity,
-          ease: 'easeInOut',
-        }}
-      >
+      <span className={s.lastName}>
         {displayLastName}
         {typing && text.length < fullName.length && (
           <motion.span
@@ -84,7 +64,7 @@ export default function AnimatedLogo({ className = '', typing = true }: Animated
             |
           </motion.span>
         )}
-      </motion.span>
+      </span>
     </motion.div>
   )
 }

@@ -1,7 +1,6 @@
 import './styles/globals.css'
 import { ThemeProvider } from './contexts/ThemeContext'
 import { LanguageProvider } from './contexts/LanguageContext'
-import AnimatedBackground from './components/AnimatedBackground'
 import Nav     from './components/Nav'
 import Hero    from './components/Hero'
 import Work    from './components/Work'
@@ -14,7 +13,6 @@ export default function App() {
   return (
     <LanguageProvider>
       <ThemeProvider>
-        <AnimatedBackground />
         <a href="#work" className="skip-link">Skip to content</a>
         <Nav />
         <main>
