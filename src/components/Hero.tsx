@@ -143,8 +143,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.6 }}
           >
-            {t.hero.lead.split('—')[0]} —<br />
-            {t.hero.lead.split('—')[1]}
+            {t.hero.lead}
           </motion.p>
 
           <motion.div

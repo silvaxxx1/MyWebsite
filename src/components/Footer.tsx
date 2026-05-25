@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className={s.footer}>
       <div className={`wrap ${s.inner}`}>
         <a href="#top" aria-label="Mohammed Sedeg - Back to top">
-          <AnimatedLogo className={s.name} typing={true} />
+          <AnimatedLogo className={s.name} typing={false} />
         </a>
         <span className={s.copy}>
           {t.footer.copyright.replace('{year}', new Date().getFullYear().toString())}{' '}
