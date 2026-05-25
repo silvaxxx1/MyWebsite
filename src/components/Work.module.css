@@ -30,6 +30,9 @@
   font-family: var(--ff-mono); font-size: 10px;
   letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent);
 }
+.typeProduction { color: var(--accent); }
+.typeResearch   { color: #60a5fa; }
+.typeSystems    { color: #a78bfa; }
 .projectYear {
   font-family: var(--ff-mono); font-size: 11px; color: var(--ink-4);
 }
@@ -75,11 +78,17 @@
 }
 
 .projectLink {
-  font-family: var(--ff-mono); font-size: 13px;
-  color: var(--ink-4); white-space: nowrap;
-  padding-top: 4px; flex-shrink: 0; transition: color 0.2s;
+  font-family: var(--ff-mono); font-size: 12px;
+  color: var(--accent); white-space: nowrap; flex-shrink: 0;
+  border: 1px solid var(--accent-md); border-radius: 6px;
+  padding: 8px 14px; transition: all 0.2s;
+  align-self: flex-start;
 }
-.projectLink:hover { color: var(--accent); }
+.projectLink:hover {
+  background: var(--accent-lt);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
 
 @media (max-width: 768px) {
   .projectBody { flex-direction: column; gap: 16px; }

@@ -2,13 +2,20 @@ import { useInView } from '../hooks/useInView'
 import { useLanguage } from '../contexts/LanguageContext'
 import s from './Work.module.css'
 
+function typeClass(type: string) {
+  const t = type.toLowerCase()
+  if (t.includes('production')) return s.typeProduction
+  if (t.includes('systems')) return s.typeSystems
+  return s.typeResearch
+}
+
 function Project({ p, i }: { p: any; i: number }) {
   const { ref, inView } = useInView()
   const { t } = useLanguage()
   return (
     <div ref={ref} className={`${s.project} reveal ${inView ? 'in' : ''} d${(i % 3) + 1}`}>
       <div className={s.projectMeta}>
-        <span className={s.projectType}>{p.type}</span>
+        <span className={`${s.projectType} ${typeClass(p.type)}`}>{p.type}</span>
         <span className={s.projectYear}>{p.year}</span>
       </div>
       <div className={s.projectBody}>

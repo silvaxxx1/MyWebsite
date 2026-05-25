@@ -23,9 +23,7 @@ export default function Contact() {
           </a>
 
           <a
-            href="https://calendly.com/" // Replace with your actual scheduling link
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:silvapi1994@gmail.com"
             className={s.scheduleButton}
           >
             {t.contact.scheduleButton}

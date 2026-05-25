@@ -348,6 +348,17 @@
   transform: translateY(-2px);
 }
 
+.pillAvailable {
+  border-color: #22c55e44;
+  background: #22c55e12;
+  color: #22c55e;
+}
+.pillAvailable:hover {
+  background: #22c55e22;
+  border-color: #22c55e;
+  color: #22c55e;
+}
+
 /* === Actions === */
 .actions {
   display: flex;
