@@ -109,7 +109,10 @@ export default function Hero() {
             }}
           >
             <div className={s.photoGlow} />
-            <img src="/MyWebsite/me.png" alt={`${t.hero.firstName} ${t.hero.lastName}`} className={s.photo} fetchPriority="high" />
+            <picture>
+              <source srcSet="/MyWebsite/me.webp" type="image/webp" />
+              <img src="/MyWebsite/me.png" alt={`${t.hero.firstName} ${t.hero.lastName}`} className={s.photo} fetchPriority="high" width={896} height={1114} />
+            </picture>
             <motion.div
               className={s.flag}
               animate={{
