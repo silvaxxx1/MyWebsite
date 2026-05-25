@@ -195,7 +195,6 @@ export default function Hero() {
             <span className={s.pill}>{t.hero.pill1}</span>
             <span className={s.pill}>{t.hero.pill2}</span>
             <span className={s.pill}>{t.hero.pill3}</span>
-            <span className={`${s.pill} ${s.pillAvailable}`}>{t.hero.pill4}</span>
           </motion.div>
 
           <motion.div

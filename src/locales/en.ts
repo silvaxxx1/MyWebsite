@@ -21,7 +21,6 @@ export const en = {
     pill1: '🎓 PhD Candidate',
     pill2: '💻 Karabük University',
     pill3: '🌍 Khartoum · Turkey · Remote',
-    pill4: '🟢 Open to roles',
     viewWork: 'View my work',
     getInTouch: 'Get in touch',
     downloadCV: 'Download CV',

@@ -33,7 +33,7 @@ export default function Contact() {
             <a href="https://github.com/silvaxxx1" target="_blank" rel="noopener noreferrer">{t.contact.github}</a>
             <a href="https://www.linkedin.com/in/mohammed-sedeg-67444b307/" target="_blank" rel="noopener noreferrer">{t.contact.linkedin}</a>
             <a href="https://github.com/SAIR-Org" target="_blank" rel="noopener noreferrer">{t.contact.sair}</a>
-            <a href="https://t.me/+jPPlO6ZFDbtlYzU0" target="_blank" rel="noopener noreferrer">{t.contact.telegram}</a>
+            <a href="https://t.me/sair19969" target="_blank" rel="noopener noreferrer">{t.contact.telegram}</a>
           </div>
         </div>
       </div>

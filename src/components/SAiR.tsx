@@ -53,7 +53,7 @@ export default function SAiR() {
               <a href="https://github.com/SAIR-Org" target="_blank" rel="noopener noreferrer" className={s.link}>
                 {t.sair.githubOrg}
               </a>
-              <a href="https://t.me/+jPPlO6ZFDbtlYzU0" target="_blank" rel="noopener noreferrer" className={s.link}>
+              <a href="https://t.me/sair19969" target="_blank" rel="noopener noreferrer" className={s.link}>
                 {t.sair.joinTelegram}
               </a>
             </div>
