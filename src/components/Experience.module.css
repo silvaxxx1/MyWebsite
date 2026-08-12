@@ -1,0 +1,36 @@
+.body { margin-top: 56px; display: flex; flex-direction: column; }
+
+.role { padding-bottom: 32px; }
+
+.roleHead {
+  display: flex; justify-content: space-between; align-items: baseline;
+  gap: 16px; margin-bottom: 12px; flex-wrap: wrap;
+}
+.roleTitleWrap { display: flex; flex-direction: column; gap: 2px; }
+.roleTitle {
+  font-family: var(--ff-serif); font-size: 17px; font-weight: 700;
+  color: var(--ink); line-height: 1.3;
+}
+.roleOrg {
+  font-family: var(--ff-mono); font-size: 11px;
+  color: var(--accent); letter-spacing: 0.04em;
+}
+.rolePeriod {
+  font-family: var(--ff-mono); font-size: 11px;
+  color: var(--ink-4); white-space: nowrap;
+}
+
+.bullets { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.bullets li {
+  font-size: 13px; color: var(--ink-3); line-height: 1.65;
+  padding-left: 16px; position: relative; max-width: 70ch;
+}
+.bullets li::before {
+  content: '—'; position: absolute; left: 0; color: var(--ink-4);
+}
+
+.divider { height: 1px; background: var(--border); margin-top: 32px; }
+
+@media (max-width: 600px) {
+  .roleHead { flex-direction: column; gap: 4px; }
+}

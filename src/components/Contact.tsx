@@ -1,5 +1,6 @@
 import { useInView } from '../hooks/useInView'
 import { useLanguage } from '../contexts/LanguageContext'
+import { BOOKING_URL } from '../constants'
 import s from './Contact.module.css'
 
 export default function Contact() {
@@ -23,7 +24,7 @@ export default function Contact() {
           </a>
 
           <a
-            href="https://calendly.com/silvapi1994/30min"
+            href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
             className={s.scheduleButton}

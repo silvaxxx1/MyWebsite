@@ -102,6 +102,54 @@ export const en = {
     ],
   },
 
+  // Experience
+  experience: {
+    label: 'Experience',
+    title: 'Where I\'ve Worked',
+    rolesList: [
+      {
+        title: 'AI Engineer & LLM Consultant',
+        org: 'Independent / Contract',
+        period: '2023 – Present',
+        bullets: [
+          'Shipped multi-provider enterprise RAG systems over pgvector, Qdrant, and MongoDB via FastAPI, cutting query latency 40% on production workloads.',
+          'Cut client fine-tuning costs 70% via LoRA/QLoRA on 7B–13B models; accelerated distributed training 20–30% with DeepSpeed, DDP, and AMP.',
+          'Deployed GGUF/ExLlamaV2 quantized models at 3× faster inference; built a Prometheus + Grafana observability stack and Prefect pipelines, cutting deployment cycle time 35%.',
+          'Built a fintech KYC OCR pipeline with Mistral OCR, reducing manual document processing 60%.',
+        ],
+      },
+      {
+        title: 'AI Engineer, Computer Vision Specialist',
+        org: 'VisionCore',
+        period: '2024 – 2025',
+        bullets: [
+          'Deployed low-latency edge AI (TFLite, ONNX) on <4GB RAM hardware, achieving 60–80ms end-to-end inference.',
+          'Built a real-time PPE detection system with YOLOv8 reaching 85–90% mAP in production.',
+          'Automated annotation via Roboflow and VLM-assisted labeling, cutting manual effort 25% and doubling dataset iteration speed.',
+        ],
+      },
+      {
+        title: 'R&D Engineer, AI & Deep Learning',
+        org: 'Karabük University',
+        period: '2021 – 2023',
+        bullets: [
+          'Designed a multimodal solar forecasting system (LSTM + Transformer + CNN with cross-modal attention) over NOAA GOES-16/17 imagery, state-of-the-art across all benchmarks.',
+          'Built a V2G microgrid optimization pipeline using Improved Antlion Optimizer + PSO + Monte Carlo simulation — published.',
+        ],
+      },
+      {
+        title: 'Industrial Automation & Renewable Energy',
+        org: 'Early Engineering Roles',
+        period: '2017 – 2021',
+        bullets: [
+          'Managed 24/7 PLC/HMI/SCADA systems, improving uptime ~18%.',
+          'Designed a dual-axis solar tracker achieving +35% energy capture.',
+          'Led hybrid solar-EV R&D from concept to prototype.',
+        ],
+      },
+    ],
+  },
+
   // SAiR
   sair: {
     label: 'SAiR Initiative',
@@ -132,6 +180,46 @@ export const en = {
       'Arabic NLP pipelines',
       'Production ML deployments',
     ],
+  },
+
+  // Consulting
+  consulting: {
+    label: 'Consulting',
+    title: 'Work With Me',
+    intro: 'I split my consulting into two lanes: helping individual engineers make a real career transition, and helping companies ship AI systems that actually hold up in production.',
+
+    individualsLabel: 'For Individuals',
+    individualsIntro: 'Most people don\'t need "more theory." They need someone to make the transition legible: what actually changes when you move from one discipline to the next, and what doesn\'t.',
+    pillars: [
+      {
+        title: 'Software Engineer → AI Engineer',
+        desc: 'You already know how to build systems. I help you map that into model serving, data pipelines, and the parts of AI that are just engineering with a new vocabulary.',
+      },
+      {
+        title: 'Data Scientist → AI Engineer',
+        desc: 'Closing the gap between notebooks and production: version control, serving, monitoring, and the discipline that turns a working model into a working system.',
+      },
+      {
+        title: 'Researcher → Production',
+        desc: 'Research code optimizes for correctness once. Production optimizes for correctness always, under load, under drift. I help translate between the two mindsets.',
+      },
+      {
+        title: 'Team Upskilling',
+        desc: 'Structured training for your engineers on current state-of-the-art: LLM systems, RAG, fine-tuning, edge deployment, evals, whatever your stack actually needs.',
+      },
+    ],
+
+    enterpriseLabel: 'For Enterprise',
+    enterpriseIntro: 'Solutions and hands-on expertise across the systems I\'ve shipped in production: LLM platforms, RAG, edge vision, and the MLOps layer that keeps them running.',
+    offerings: [
+      'LLM & RAG system design and deployment',
+      'Edge AI / computer vision deployment (TinyML, Jetson, ONNX, TensorRT)',
+      'MLOps pipeline design and production hardening',
+      'Technical audits and architecture review',
+      'Custom AI solution development, end to end',
+    ],
+
+    ctaButton: 'Book Consultancy',
   },
 
   // About
