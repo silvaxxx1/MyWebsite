@@ -142,3 +142,18 @@
     margin-top: 12px;
   }
 }
+.consultCta {
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--accent-md);
+  background: var(--accent-lt);
+  color: var(--accent) !important;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.consultCta:hover {
+  background: var(--accent);
+  color: var(--bg) !important;
+  transform: translateY(-1px);
+}

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
 import LanguageToggle from "./LanguageToggle";
 import AnimatedLogo from "./AnimatedLogo";
@@ -19,30 +20,30 @@ export default function Nav() {
   return (
     <header className={`${s.nav} ${scrolled ? s.scrolled : ""}`}>
       <div className={`wrap ${s.inner}`}>
-        <a href="#top" aria-label="Mohammed Sedeg - Home">
+        <Link to="/" aria-label="Mohammed Sedeg - Home">
           <AnimatedLogo className={s.logo} typing={false} />
-        </a>
-
+        </Link>
         <nav className={`${s.links} ${open ? s.open : ""}`}>
-          <a href="#work" className={s.link} onClick={() => setOpen(false)}>
+          <Link to="/#work" className={s.link} onClick={() => setOpen(false)}>
             {t.nav.work}
-          </a>
-          <a href="#sair" className={s.link} onClick={() => setOpen(false)}>
+          </Link>
+          <Link to="/#sair" className={s.link} onClick={() => setOpen(false)}>
             {t.nav.sair}
-          </a>
-          <a href="#about" className={s.link} onClick={() => setOpen(false)}>
+          </Link>
+          <Link to="/consulting" className={`${s.link} ${s.consultCta}`} onClick={() => setOpen(false)}>
+            Consulting
+          </Link>
+          <Link to="/#about" className={s.link} onClick={() => setOpen(false)}>
             {t.nav.about}
-          </a>
-          <a href="#contact" className={s.link} onClick={() => setOpen(false)}>
+          </Link>
+          <Link to="/#contact" className={s.link} onClick={() => setOpen(false)}>
             {t.nav.contact}
-          </a>
-
+          </Link>
           <div className={s.toggleWrapper}>
             <LanguageToggle />
             <ThemeToggle />
           </div>
         </nav>
-
         <button
           className={`${s.burger} ${open ? s.burgerOpen : ""}`}
           onClick={() => setOpen(!open)}

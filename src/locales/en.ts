@@ -182,11 +182,10 @@ export const en = {
     ],
   },
 
-  // Consulting
-  consulting: {
+consulting: {
     label: 'Consulting',
     title: 'Work With Me',
-    intro: 'I split my consulting into two lanes: helping individual engineers make a real career transition, and helping companies ship AI systems that actually hold up in production.',
+    intro: 'I split my consulting into two lanes: helping individual engineers make a real career transition, and helping companies ship AI systems that actually hold up in production. Both come from the same place — five years of building this stuff for real, not just writing about it.',
 
     individualsLabel: 'For Individuals',
     individualsIntro: 'Most people don\'t need "more theory." They need someone to make the transition legible: what actually changes when you move from one discipline to the next, and what doesn\'t.',
@@ -210,16 +209,33 @@ export const en = {
     ],
 
     enterpriseLabel: 'For Enterprise',
-    enterpriseIntro: 'Solutions and hands-on expertise across the systems I\'ve shipped in production: LLM platforms, RAG, edge vision, and the MLOps layer that keeps them running.',
+    enterpriseIntro: 'The systems I\'ve shipped in production, available as hands-on engagement: I come in, understand your stack, and either build it with your team or hand off something that works under real load.',
     offerings: [
-      'LLM & RAG system design and deployment',
-      'Edge AI / computer vision deployment (TinyML, Jetson, ONNX, TensorRT)',
-      'MLOps pipeline design and production hardening',
-      'Technical audits and architecture review',
-      'Custom AI solution development, end to end',
+      {
+        title: 'LLM & RAG Systems',
+        desc: 'Design and deployment of retrieval-augmented generation platforms built to handle real traffic, not demo traffic.',
+      },
+      {
+        title: 'Edge AI & Computer Vision',
+        desc: 'Low-latency deployment on constrained hardware — TinyML, Jetson, ONNX, TensorRT — where every millisecond and megabyte counts.',
+      },
+      {
+        title: 'MLOps & Production Hardening',
+        desc: 'Pipeline design, observability, and the operational discipline that keeps a model running after the demo ends.',
+      },
+      {
+        title: 'Technical Audits & Architecture Review',
+        desc: 'An outside, experienced eye on what you\'ve already built — before it becomes a costly problem in production.',
+      },
+      {
+        title: 'Custom AI Solutions',
+        desc: 'End-to-end development when the problem doesn\'t fit an off-the-shelf tool.',
+      },
     ],
 
-    ctaButton: 'Book Consultancy',
+    ctaHeading: 'Let\'s talk about what you\'re building.',
+    ctaSubtext: 'One call to figure out if this is a fit — no pitch deck, no pressure.',
+    ctaButton: 'Book a Call',
   },
 
   // About
@@ -266,7 +282,7 @@ export const en = {
   contact: {
     label: 'Contact',
     title: 'Get in touch',
-    subtitle: 'Currently available for senior AI engineering roles, multi-agent systems, LLM consulting, and research collaborations. The best way to reach me is directly.',
+    subtitle: 'Open to senior AI engineering roles, consulting engagements, and research collaborations — across LLM systems, computer vision, edge AI, and production ML. The best way to reach me is directly.',
     email: 'silvapi1994@gmail.com',
     github: 'GitHub ↗',
     linkedin: 'LinkedIn ↗',

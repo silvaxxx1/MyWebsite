@@ -6,6 +6,7 @@ import s from './Consulting.module.css'
 export default function Consulting() {
   const { ref, inView } = useInView()
   const { ref: r2, inView: v2 } = useInView()
+  const { ref: r3, inView: v3 } = useInView()
   const { t } = useLanguage()
 
   const pillars = t.consulting.pillars as any
@@ -43,26 +44,34 @@ export default function Consulting() {
             <p className={s.blockLabel}>{t.consulting.enterpriseLabel}</p>
             <p className={s.leadText}>{t.consulting.enterpriseIntro}</p>
 
-            <div className={s.offerings}>
-              {offerings.map((o: string, i: number) => (
-                <div key={i} className={s.offeringRow}>
-                  <span className={s.dot} />
-                  <span>{o}</span>
+            <div className={s.pillars}>
+              {offerings.map((o: any, i: number) => (
+                <div key={i} className={s.pillar}>
+                  <span className={s.pillarNum}>0{i + 1}</span>
+                  <div>
+                    <div className={s.pillarTitle}>{o.title}</div>
+                    <div className={s.pillarDesc}>{o.desc}</div>
+                  </div>
                 </div>
               ))}
             </div>
-
-            <a
-              href={BOOKING_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={s.ctaButton}
-            >
-              {t.consulting.ctaButton}
-            </a>
           </div>
 
         </div>
+
+        <div ref={r3} className={`${s.ctaBlock} reveal ${v3 ? 'in' : ''}`}>
+          <h3 className={s.ctaHeading}>{t.consulting.ctaHeading}</h3>
+          <p className={s.ctaSubtext}>{t.consulting.ctaSubtext}</p>
+          <a
+            href={BOOKING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={s.ctaButton}
+          >
+            {t.consulting.ctaButton}
+          </a>
+        </div>
+
       </div>
     </section>
   )

@@ -4,7 +4,7 @@
 }
 
 .body {
-  display: grid; grid-template-columns: 1.1fr 1fr;
+  display: grid; grid-template-columns: 1fr 1fr;
   gap: 80px; margin-top: 56px; align-items: start;
 }
 
@@ -19,7 +19,6 @@
   margin-bottom: 28px; max-width: 50ch;
 }
 
-/* Individuals pillars */
 .pillars { display: flex; flex-direction: column; gap: 20px; }
 .pillar { display: flex; gap: 16px; align-items: flex-start; }
 .pillarNum {
@@ -32,28 +31,36 @@
 }
 .pillarDesc { font-size: 13px; color: var(--ink-3); line-height: 1.6; }
 
-/* Enterprise offerings */
-.offerings { display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
-.offeringRow {
-  display: flex; gap: 10px; align-items: baseline;
-  font-size: 13px; color: var(--ink-3); line-height: 1.6;
-}
-.dot {
-  width: 5px; height: 5px; border-radius: 50%;
-  background: var(--accent); flex-shrink: 0;
-  transform: translateY(-2px);
+.ctaBlock {
+  margin-top: 72px;
+  padding-top: 48px;
+  border-top: 1px solid var(--border-md);
+  text-align: center;
 }
 
-/* CTA */
+.ctaHeading {
+  font-family: var(--ff-serif); font-size: 22px; font-weight: 700;
+  color: var(--ink); margin-bottom: 10px;
+}
+
+.ctaSubtext {
+  font-size: 13px; color: var(--ink-3);
+  margin-bottom: 24px;
+}
+
 .ctaButton {
   display: inline-flex; align-items: center; gap: 8px;
-  padding: 13px 24px; border-radius: 8px;
+  padding: 13px 28px; border-radius: 999px;
   font-family: var(--ff-mono); font-size: 12px;
   letter-spacing: 0.04em; text-transform: uppercase;
-  background: var(--ink); color: var(--bg, #fff);
-  transition: opacity 0.2s ease;
+  border: 1px solid var(--accent-md);
+  background: var(--accent-lt); color: var(--accent);
+  transition: all 0.2s ease;
 }
-.ctaButton:hover { opacity: 0.85; }
+.ctaButton:hover {
+  background: var(--accent); color: var(--bg);
+  transform: translateY(-1px);
+}
 
 @media (max-width: 900px) {
   .body { grid-template-columns: 1fr; gap: 48px; }
