@@ -65,3 +65,70 @@
 @media (max-width: 900px) {
   .body { grid-template-columns: 1fr; gap: 48px; }
 }
+
+.sairNote {
+  font-size: 12px;
+  color: var(--ink-4);
+  font-family: var(--ff-mono);
+  margin-bottom: 20px;
+}
+
+.liveStatus {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  margin-bottom: 28px;
+  border: 1px solid var(--accent-md);
+  background: var(--accent-lt);
+  border-radius: var(--r);
+}
+
+.liveDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+}
+
+.liveStatusLabel {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.liveStatusText {
+  font-size: 13px;
+  color: var(--ink-2);
+  font-weight: 600;
+}
+
+.pillarTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.pillarTitleRow .pillarTitle {
+  margin-bottom: 0;
+}
+
+.pillarTag {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  background: var(--accent-lt);
+  border: 1px solid var(--accent-md);
+  border-radius: 100px;
+  padding: 3px 10px;
+  white-space: nowrap;
+}

@@ -208,6 +208,14 @@ export default function Hero() {
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.97 }}
             >{t.hero.downloadCV}</motion.a>
+            <motion.a
+              href="https://drive.google.com/drive/folders/1_jptrFFIlA3uZUXjhCKuEX6JztPal1u1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={s.btnGhost}
+              whileHover={{ scale: 1.05, borderColor: 'var(--ink)' }}
+              whileTap={{ scale: 0.97 }}
+            >{t.hero.certificates}</motion.a>
           </motion.div>
 
           <motion.div

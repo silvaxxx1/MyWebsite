@@ -24,6 +24,7 @@ export const en = {
     viewWork: 'View my work',
     getInTouch: 'Get in touch',
     downloadCV: 'Download CV',
+    certificates: 'Certificates & Courses',
     github: 'GitHub',
     linkedin: 'LinkedIn',
     sairOrg: 'SAiR Org',
@@ -112,10 +113,10 @@ export const en = {
         org: 'Independent / Contract',
         period: '2023 – Present',
         bullets: [
-          'Shipped multi-provider enterprise RAG systems over pgvector, Qdrant, and MongoDB via FastAPI, cutting query latency 40% on production workloads.',
+          'Shipped multi-provider enterprise RAG systems (OpenAI, Cohere, Hugging Face, Ollama) over pgvector, Qdrant, and MongoDB via FastAPI, cutting query latency 40% on production workloads.',
           'Cut client fine-tuning costs 70% via LoRA/QLoRA on 7B–13B models; accelerated distributed training 20–30% with DeepSpeed, DDP, and AMP.',
           'Deployed GGUF/ExLlamaV2 quantized models at 3× faster inference; built a Prometheus + Grafana observability stack and Prefect pipelines, cutting deployment cycle time 35%.',
-          'Built a fintech KYC OCR pipeline with Mistral OCR, reducing manual document processing 60%.',
+          'Redesigned a fintech KYC pipeline that was projected at ~$100K/month and sent raw PII to a third-party API with no compliance guardrails — rebuilt as a self-hosted complexity-classification router, cutting cost to ~$30/month (>99.9% reduction), keeping all data on-premises, reducing manual processing 60%, and improving extraction reasoning 20% via Chain-of-Thought/Tree-of-Thought prompting.',
         ],
       },
       {
@@ -124,7 +125,7 @@ export const en = {
         period: '2024 – 2025',
         bullets: [
           'Deployed low-latency edge AI (TFLite, ONNX) on <4GB RAM hardware, achieving 60–80ms end-to-end inference.',
-          'Built a real-time PPE detection system with YOLOv8 reaching 85–90% mAP in production.',
+          'Built a YOLOv8 PPE detection system reaching 85–90% mAP across 8 categories, deployed via NVIDIA DeepStream as a multi-stream pipeline processing 30 concurrent camera feeds on a 4×RTX 4070 server; cut overfitting 15% via Mosaic, MixUp, and Albumentations augmentation.',
           'Automated annotation via Roboflow and VLM-assisted labeling, cutting manual effort 25% and doubling dataset iteration speed.',
         ],
       },
@@ -155,12 +156,12 @@ export const en = {
     label: 'SAiR Initiative',
     title: 'Sudanese AI Research Organization',
     quote: '"Knowledge is only powerful when it moves."',
-    story1: 'I founded SAiR because I kept meeting brilliant people in Sudan and across Africa who had the curiosity but not the access. The resources exist. The talent exists. The gap is structural, not intellectual.',
+    story1: 'I founded SAiR because I kept meeting brilliant people in Sudan and across Africa who had the curiosity but not the access. The resources exist. The talent exists. The gap is structural, not intellectual. Today it\'s a 500+ member community.',
     story2: 'SAiR is free, open-source, and built around one idea: if you understand something deeply enough to teach it, you understand it.',
     stats: {
       engineers: 'engineers trained',
-      countries: 'countries',
-      modules: 'modules · free',
+      completion: 'completion rate',
+      timeToOffer: 'avg. time to offer',
     },
     githubOrg: 'GitHub Organization ↗',
     joinTelegram: 'Join on Telegram ↗',
@@ -180,6 +181,11 @@ export const en = {
       'Arabic NLP pipelines',
       'Production ML deployments',
     ],
+    capstoneLabel: 'Flagship Capstone',
+    capstoneTitle: 'miniGPT — Built by a Top SAiR Student',
+    capstoneTagline: 'A full-stack, hackable GPT playground — from raw text to a live web UI.',
+    capstoneDesc: 'A from-scratch GPT-2 implementation with a full training pipeline: tokenizer, multi-head attention, configurable model sizes (10M–163M+ params), DDP training, and cloud training on Modal A100 — shipped with 39 passing tests. Built by a top SAiR graduate now nearing job offers.',
+    capstoneLink: 'View on GitHub ↗',
   },
 
 consulting: {
@@ -189,6 +195,8 @@ consulting: {
 
     individualsLabel: 'For Individuals',
     individualsIntro: 'Most people don\'t need "more theory." They need someone to make the transition legible: what actually changes when you move from one discipline to the next, and what doesn\'t.',
+    liveStatusLabel: 'Currently Mentoring',
+    liveStatusText: '5 Senior Engineers · 1 Data Scientist · 1 Researcher',
     pillars: [
       {
         title: 'Software Engineer → AI Engineer',
@@ -204,7 +212,8 @@ consulting: {
       },
       {
         title: 'Team Upskilling',
-        desc: 'Structured training for your engineers on current state-of-the-art: LLM systems, RAG, fine-tuning, edge deployment, evals, whatever your stack actually needs.',
+        tag: '3× Shipped in Production',
+        desc: 'Done this three times in production: training electrical engineers to deploy models, operators to run CV systems, and researchers to build automated experimentation pipelines. Each program shipped real tooling the team still uses.',
       },
     ],
 
@@ -233,9 +242,21 @@ consulting: {
       },
     ],
 
+    sairNote: 'Outside client work, I run SAiR — a free curriculum that\'s trained 300+ engineers across 5 countries.',
     ctaHeading: 'Let\'s talk about what you\'re building.',
     ctaSubtext: 'One call to figure out if this is a fit — no pitch deck, no pressure.',
     ctaButton: 'Book a Call',
+  },
+
+  workWithMe: {
+    label: 'Consulting',
+    title: 'Work With Me',
+    subtitle: 'Helping individual engineers transition into AI roles, and helping companies ship AI systems that hold up in production.',
+    individualsTitle: 'For Individuals',
+    individualsText: 'Career transitions into AI engineering — from software, data science, or research — plus structured team upskilling.',
+    enterpriseTitle: 'For Enterprise',
+    enterpriseText: 'LLM & RAG system design, edge AI deployment, MLOps hardening, technical audits, and end-to-end AI solution development.',
+    ctaButton: 'View Consulting →',
   },
 
   // About

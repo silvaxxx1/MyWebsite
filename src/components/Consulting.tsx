@@ -27,12 +27,23 @@ export default function Consulting() {
             <p className={s.blockLabel}>{t.consulting.individualsLabel}</p>
             <p className={s.leadText}>{t.consulting.individualsIntro}</p>
 
+            <div className={s.liveStatus}>
+              <span className={s.liveDot} />
+              <div>
+                <div className={s.liveStatusLabel}>{t.consulting.liveStatusLabel}</div>
+                <div className={s.liveStatusText}>{t.consulting.liveStatusText}</div>
+              </div>
+            </div>
+
             <div className={s.pillars}>
               {pillars.map((p: any, i: number) => (
                 <div key={i} className={s.pillar}>
                   <span className={s.pillarNum}>0{i + 1}</span>
                   <div>
-                    <div className={s.pillarTitle}>{p.title}</div>
+                    <div className={s.pillarTitleRow}>
+                      <span className={s.pillarTitle}>{p.title}</span>
+                      {p.tag && <span className={s.pillarTag}>{p.tag}</span>}
+                    </div>
                     <div className={s.pillarDesc}>{p.desc}</div>
                   </div>
                 </div>
@@ -49,7 +60,9 @@ export default function Consulting() {
                 <div key={i} className={s.pillar}>
                   <span className={s.pillarNum}>0{i + 1}</span>
                   <div>
-                    <div className={s.pillarTitle}>{o.title}</div>
+                    <div className={s.pillarTitleRow}>
+                      <span className={s.pillarTitle}>{o.title}</span>
+                    </div>
                     <div className={s.pillarDesc}>{o.desc}</div>
                   </div>
                 </div>
@@ -60,6 +73,7 @@ export default function Consulting() {
         </div>
 
         <div ref={r3} className={`${s.ctaBlock} reveal ${v3 ? 'in' : ''}`}>
+          <p className={s.sairNote}>{t.consulting.sairNote}</p>
           <h3 className={s.ctaHeading}>{t.consulting.ctaHeading}</h3>
           <p className={s.ctaSubtext}>{t.consulting.ctaSubtext}</p>
           <a

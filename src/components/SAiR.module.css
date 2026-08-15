@@ -101,7 +101,7 @@
   font-family: var(--ff-mono);
   font-size: 11px;
   color: var(--accent);
-  opacity: 0.5;
+  font-weight: 600;
   min-width: 22px;
 }
 .moduleName {
@@ -116,14 +116,13 @@
   padding: 8px 0;
   border-bottom: 1px solid var(--border);
   font-size: 13px;
-  color: var(--ink-4);
+  color: var(--ink-3);
 }
 .dot {
   width: 5px;
   height: 5px;
   border-radius: 50%;
   background: var(--accent);
-  opacity: 0.5;
   flex-shrink: 0;
 }
 
@@ -135,4 +134,58 @@
   .numbers {
     gap: 28px;
   }
+}
+
+.capstone {
+  margin-top: 28px;
+  padding: 18px 20px;
+  border: 1px solid var(--accent-md);
+  background: var(--accent-lt);
+  border-radius: var(--r);
+}
+
+.capstoneLabel {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.capstoneTitle {
+  font-family: var(--ff-serif);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.capstoneDesc {
+  font-size: 13px;
+  color: var(--ink-3);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.capstoneLink {
+  font-family: var(--ff-mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+  transition: color 0.2s;
+}
+
+.capstoneLink:hover {
+  color: var(--ink);
+}
+
+.capstoneTagline {
+  font-style: italic;
+  font-size: 13px;
+  color: var(--ink-3);
+  margin-bottom: 10px;
 }

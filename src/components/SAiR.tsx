@@ -40,12 +40,12 @@ export default function SAiR() {
                 <span className={s.statLabel}>{t.sair.stats.engineers}</span>
               </div>
               <div className={s.stat}>
-                <span className={s.statVal}>5</span>
-                <span className={s.statLabel}>{t.sair.stats.countries}</span>
+                <span className={s.statVal}>65%</span>
+                <span className={s.statLabel}>{t.sair.stats.completion}</span>
               </div>
               <div className={s.stat}>
-                <span className={s.statVal}>6</span>
-                <span className={s.statLabel}>{t.sair.stats.modules}</span>
+                <span className={s.statVal}>6 mo</span>
+                <span className={s.statLabel}>{t.sair.stats.timeToOffer}</span>
               </div>
             </div>
 
@@ -75,6 +75,21 @@ export default function SAiR() {
                 <span>{o}</span>
               </div>
             ))}
+
+            <div className={s.capstone}>
+              <span className={s.capstoneLabel}>{t.sair.capstoneLabel}</span>
+              <div className={s.capstoneTitle}>{t.sair.capstoneTitle}</div>
+              <p className={s.capstoneTagline}>{t.sair.capstoneTagline}</p>
+              <p className={s.capstoneDesc}>{t.sair.capstoneDesc}</p>
+              <a
+                href="https://github.com/SAIR-Org/miniGPT"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={s.capstoneLink}
+              >
+                {t.sair.capstoneLink}
+              </a>
+            </div>
           </div>
 
         </div>
