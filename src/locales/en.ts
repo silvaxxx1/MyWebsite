@@ -191,71 +191,70 @@ export const en = {
 consulting: {
     label: 'Consulting',
     title: 'Work With Me',
-    intro: 'I split my consulting into two lanes: helping individual engineers make a real career transition, and helping companies ship AI systems that actually hold up in production. Both come from the same place — five years of building this stuff for real, not just writing about it.',
-
+    intro: 'I work at the point where AI moves from research and prototypes into production. I help engineers transition into AI engineering, and I help companies design, build, and harden AI systems that have to work under real-world constraints.',
     individualsLabel: 'For Individuals',
-    individualsIntro: 'Most people don\'t need "more theory." They need someone to make the transition legible: what actually changes when you move from one discipline to the next, and what doesn\'t.',
-    liveStatusLabel: 'Currently Mentoring',
+    individualsIntro: 'Structured guidance for engineers moving into AI — focused on the technical skills, systems thinking, and production practices required to make the transition successfully.',
+    liveStatusLabel: 'Currently Working With',
     liveStatusText: '5 Senior Engineers · 1 Data Scientist · 1 Researcher',
     pillars: [
-      {
-        title: 'Software Engineer → AI Engineer',
-        desc: 'You already know how to build systems. I help you map that into model serving, data pipelines, and the parts of AI that are just engineering with a new vocabulary.',
-      },
-      {
-        title: 'Data Scientist → AI Engineer',
-        desc: 'Closing the gap between notebooks and production: version control, serving, monitoring, and the discipline that turns a working model into a working system.',
-      },
-      {
-        title: 'Researcher → Production',
-        desc: 'Research code optimizes for correctness once. Production optimizes for correctness always, under load, under drift. I help translate between the two mindsets.',
-      },
-      {
-        title: 'Team Upskilling',
-        tag: '3× Shipped in Production',
-        desc: 'Done this three times in production: training electrical engineers to deploy models, operators to run CV systems, and researchers to build automated experimentation pipelines. Each program shipped real tooling the team still uses.',
-      },
-    ],
+  {
+    title: 'Software Engineer → AI Engineer',
+    desc: 'Translate existing software engineering skills into AI systems: model serving, data pipelines, inference, evaluation, and production architecture.',
+  },
+  {
+    title: 'Data Scientist → AI Engineer',
+    desc: 'Move beyond notebooks into production: reproducible pipelines, model serving, monitoring, deployment, and reliable AI infrastructure.',
+  },
+  {
+    title: 'Researcher → Production',
+    desc: 'Bridge the gap between research and production by turning experimental models and code into reproducible, deployable systems.',
+  },
+  {
+    title: 'Team Upskilling',
+    tag: '3× Shipped in Production',
+    desc: 'Hands-on technical training for teams adopting AI — from model deployment and computer vision to automated experimentation and production tooling.',
+  },
+],
 
     enterpriseLabel: 'For Enterprise',
-    enterpriseIntro: 'The systems I\'ve shipped in production, available as hands-on engagement: I come in, understand your stack, and either build it with your team or hand off something that works under real load.',
+    enterpriseIntro: 'Hands-on AI engineering for teams that need to design, deploy, or improve production systems. I work directly with your stack, from architecture through deployment and operational hardening.',    
     offerings: [
-      {
-        title: 'LLM & RAG Systems',
-        desc: 'Design and deployment of retrieval-augmented generation platforms built to handle real traffic, not demo traffic.',
-      },
-      {
-        title: 'Edge AI & Computer Vision',
-        desc: 'Low-latency deployment on constrained hardware — TinyML, Jetson, ONNX, TensorRT — where every millisecond and megabyte counts.',
-      },
-      {
-        title: 'MLOps & Production Hardening',
-        desc: 'Pipeline design, observability, and the operational discipline that keeps a model running after the demo ends.',
-      },
-      {
-        title: 'Technical Audits & Architecture Review',
-        desc: 'An outside, experienced eye on what you\'ve already built — before it becomes a costly problem in production.',
-      },
-      {
-        title: 'Custom AI Solutions',
-        desc: 'End-to-end development when the problem doesn\'t fit an off-the-shelf tool.',
-      },
-    ],
+  {
+    title: 'LLM & RAG Systems',
+    desc: 'Architecture and implementation of production LLM applications, retrieval pipelines, evaluation systems, and scalable RAG infrastructure.',
+  },
+  {
+    title: 'Edge AI & Computer Vision',
+    desc: 'Low-latency AI deployment on constrained hardware using Jetson, ONNX, TensorRT, and optimized inference pipelines.',
+  },
+  {
+    title: 'MLOps & Production Hardening',
+    desc: 'Build and improve the infrastructure around AI systems: training pipelines, deployment, observability, monitoring, reproducibility, and reliability.',
+  },
+  {
+    title: 'AI Architecture & Technical Audits',
+    desc: 'Independent technical review of AI architectures, infrastructure, models, and deployment pipelines to identify bottlenecks, risks, and opportunities for improvement.',
+  },
+  {
+    title: 'Custom AI Systems',
+    desc: 'End-to-end AI engineering for problems that require a combination of machine learning, software engineering, data infrastructure, and deployment.',
+  },
+],
 
-    sairNote: 'Outside client work, I run SAiR — a free curriculum that\'s trained 300+ engineers across 5 countries.',
+    sairNote: 'Outside client work, I run SAiR — a free AI engineering curriculum that has trained 300+ engineers across 5 countries.',
     ctaHeading: 'Let\'s talk about what you\'re building.',
-    ctaSubtext: 'One call to figure out if this is a fit — no pitch deck, no pressure.',
+    ctaSubtext: 'A short conversation to understand the problem, assess the fit, and determine the right way to work together.',
     ctaButton: 'Book a Call',
   },
 
   workWithMe: {
     label: 'Consulting',
     title: 'Work With Me',
-    subtitle: 'Helping individual engineers transition into AI roles, and helping companies ship AI systems that hold up in production.',
+    subtitle: 'I help engineers transition into AI engineering and help companies design, build, and harden AI systems for production.',
     individualsTitle: 'For Individuals',
-    individualsText: 'Career transitions into AI engineering — from software, data science, or research — plus structured team upskilling.',
+    individualsText: 'Technical guidance for software engineers, data scientists, and researchers moving into AI engineering — plus hands-on team upskilling.',
     enterpriseTitle: 'For Enterprise',
-    enterpriseText: 'LLM & RAG system design, edge AI deployment, MLOps hardening, technical audits, and end-to-end AI solution development.',
+    enterpriseText: 'LLM & RAG systems, edge AI, computer vision, MLOps, AI architecture, technical audits, and custom AI systems.',
     ctaButton: 'View Consulting →',
   },
 

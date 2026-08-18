@@ -62,7 +62,7 @@ export default function App() {
     <LanguageProvider>
       <ThemeProvider>
         <BrowserRouter basename="/MyWebsite">
-          <a href="#work" className="skip-link">Skip to content</a>
+          
           <Nav />
           <ScrollToHash />
           <Routes>

@@ -12,12 +12,6 @@
   margin-top: 40px;
 }
 
-@media (max-width: 640px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 .card {
   padding: 28px;
   border: 1px solid var(--border-md);
@@ -68,4 +62,20 @@
   background: var(--accent);
   color: var(--bg);
   transform: translateY(-1px);
+}
+
+/* ─────────────────────────────────────────
+   RTL / Arabic
+   ───────────────────────────────────────── */
+
+html[dir="rtl"] .subtitle,
+html[dir="rtl"] .card,
+html[dir="rtl"] .cardTitle,
+html[dir="rtl"] .cardText {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .ctaButton {
+  direction: rtl;
 }
